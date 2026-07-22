@@ -1,0 +1,12 @@
+# Gitea Container Sandbox Configuration
+name: gitea-server
+rootfs: /home/alamgir-zk/Cluster-Family/cluster-lang/zk_modules/containers/gitea/rootfs
+hostname: gitea-node
+share_hardware: false
+
+env:
+    USER=root
+    GITEA_WORK_DIR=/opt/gitea
+
+run:
+    "/opt/gitea/gitea web --port 3000"
