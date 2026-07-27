@@ -26,7 +26,7 @@ else
     curl -L -o memcached.tar.gz https://memcached.org/files/memcached-1.6.21.tar.gz
 fi
 tar -xzf memcached.tar.gz --strip-components=1
-CC=gcc ./configure --prefix=/opt/memcached --with-libevent=/opt/memcached
+CC=gcc ./configure --prefix=/opt/memcached --with-libevent=/opt/memcached --disable-openssl
 make -j2
 make install
 cd /
