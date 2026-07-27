@@ -1,0 +1,8 @@
+# Gitea Actions CI/CD Runner Sandbox Configuration
+name: gitea-runner
+rootfs: ./rootfs
+hostname: gitea-runner-node
+share_hardware: false
+
+run:
+    "/opt/gitea-runner/act_runner daemon"

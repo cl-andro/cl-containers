@@ -1,0 +1,8 @@
+# WordPress PHP Application Sandbox Configuration
+name: wordpress-app
+rootfs: ./rootfs
+hostname: wordpress-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080 -t /opt/wordpress"

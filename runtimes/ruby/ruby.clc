@@ -1,0 +1,8 @@
+# Ruby Runtime Environment Sandbox Configuration
+name: ruby-runtime
+rootfs: ./rootfs
+hostname: ruby-node
+share_hardware: false
+
+run:
+    "ruby -v"

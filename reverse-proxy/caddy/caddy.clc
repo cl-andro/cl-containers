@@ -1,0 +1,8 @@
+# Caddy Server Sandbox Configuration
+name: caddy-proxy
+rootfs: ./rootfs
+hostname: caddy-node
+share_hardware: false
+
+run:
+    "/opt/caddy/caddy run --config /opt/caddy/Caddyfile"

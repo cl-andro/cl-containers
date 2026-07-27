@@ -1,0 +1,8 @@
+# MariaDB Database Server Sandbox Configuration
+name: mariadb-db
+rootfs: ./rootfs
+hostname: mariadb-node
+share_hardware: false
+
+run:
+    "/usr/sbin/mariadbd --user=mysql"

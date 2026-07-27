@@ -1,0 +1,8 @@
+# Nextcloud Personal Cloud Sandbox Configuration
+name: nextcloud-app
+rootfs: ./rootfs
+hostname: nextcloud-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080 -t /opt/nextcloud"

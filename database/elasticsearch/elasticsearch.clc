@@ -1,0 +1,8 @@
+# Elasticsearch Sandbox Configuration
+name: elasticsearch-db
+rootfs: ./rootfs
+hostname: elasticsearch-node
+share_hardware: false
+
+run:
+    "/opt/elasticsearch/bin/elasticsearch"

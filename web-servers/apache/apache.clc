@@ -1,0 +1,8 @@
+# Apache HTTP Server Sandbox Configuration
+name: apache-server
+rootfs: ./rootfs
+hostname: apache-node
+share_hardware: false
+
+run:
+    "/usr/sbin/apache2ctl -DFOREGROUND"

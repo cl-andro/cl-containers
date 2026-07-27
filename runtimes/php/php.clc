@@ -1,0 +1,8 @@
+# PHP Runtime Environment Sandbox Configuration
+name: php-runtime
+rootfs: ./rootfs
+hostname: php-node
+share_hardware: false
+
+run:
+    "php -v"

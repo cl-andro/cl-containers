@@ -1,0 +1,8 @@
+# Memcached Caching Server Sandbox Configuration
+name: memcached-cache
+rootfs: ./rootfs
+hostname: memcached-node
+share_hardware: false
+
+run:
+    "/usr/bin/memcached -u nobody -p 11211"

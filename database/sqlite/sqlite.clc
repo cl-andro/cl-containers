@@ -1,0 +1,8 @@
+# SQLite CLI Utility Sandbox Configuration
+name: sqlite-cli
+rootfs: ./rootfs
+hostname: sqlite-node
+share_hardware: false
+
+run:
+    "sqlite3 --version"

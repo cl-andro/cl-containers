@@ -1,0 +1,11 @@
+# MySQL Database Server Sandbox Configuration
+name: mysql-db
+rootfs: ./rootfs
+hostname: mysql-node
+share_hardware: false
+
+env:
+    MYSQL_UNIX_PORT=/var/run/mysqld/mysqld.sock
+
+run:
+    "/usr/sbin/mysqld --user=mysql"
