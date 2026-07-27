@@ -11,7 +11,7 @@ else
     curl -L -o libevent.tar.gz https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
 fi
 tar -xzf libevent.tar.gz --strip-components=1
-CC=gcc ./configure --prefix=/opt/memcached --disable-shared
+CC=gcc ./configure --prefix=/opt/memcached --disable-shared --disable-openssl
 make -j2
 make install
 cd /
