@@ -9,4 +9,4 @@ env:
     PGDATA=/var/lib/postgresql/data
 
 run:
-    "/usr/lib/postgresql/15/bin/postgres"
+    "/opt/postgres/bin/postgres"
