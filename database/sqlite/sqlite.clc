@@ -5,4 +5,4 @@ hostname: sqlite-node
 share_hardware: false
 
 run:
-    "sqlite3 --version"
+    "/opt/sqlite/sqlite3 --version"
