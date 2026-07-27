@@ -5,4 +5,4 @@ hostname: redis-node
 share_hardware: false
 
 run:
-    "/usr/bin/redis-server --port 6379"
+    "/opt/redis/bin/redis-server --port 6379"
