@@ -1,6 +1,6 @@
 # Gitea Container Sandbox Configuration
 name: gitea-server
-rootfs: /home/alamgir-zk/Cluster-Family/cluster-lang/zk_modules/containers/gitea/rootfs
+rootfs: ./rootfs
 hostname: gitea-node
 share_hardware: false
 
