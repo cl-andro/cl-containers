@@ -5,7 +5,8 @@ hostname: mysql-node
 share_hardware: false
 
 env:
-    MYSQL_UNIX_PORT=/var/run/mysqld/mysqld.sock
+    MYSQL_UNIX_PORT=/opt/mysql/run/mysql.sock
 
 run:
-    "/usr/sbin/mysqld --user=mysql"
+    "if [ ! -d /opt/mysql/data/mysql ]; then /opt/mysql/bin/mysqld --initialize-insecure --datadir=/opt/mysql/data --basedir=/opt/mysql; fi"
+    "/opt/mysql/bin/mysqld --datadir=/opt/mysql/data --basedir=/opt/mysql --port=3306 --socket=/opt/mysql/run/mysql.sock --mysqlx=OFF"
