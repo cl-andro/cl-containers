@@ -1,0 +1,12 @@
+# Forgejo Git Hosting Service Sandbox Configuration
+name: forgejo-git
+rootfs: ./rootfs
+hostname: forgejo-node
+share_hardware: false
+
+env:
+    USER=root
+    GITEA_WORK_DIR=/opt/forgejo
+
+run:
+    "/opt/forgejo/forgejo web"
