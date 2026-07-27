@@ -1,0 +1,8 @@
+# Redis In-Memory Data Store Sandbox Configuration
+name: redis-cache
+rootfs: ./rootfs
+hostname: redis-node
+share_hardware: false
+
+run:
+    "/usr/bin/redis-server --port 6379"

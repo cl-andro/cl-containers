@@ -1,0 +1,8 @@
+# Nginx Web Server / Reverse Proxy Sandbox Configuration
+name: nginx-server
+rootfs: ./rootfs
+hostname: nginx-node
+share_hardware: false
+
+run:
+    "/usr/sbin/nginx -g 'daemon off;'"

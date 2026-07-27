@@ -1,0 +1,11 @@
+# Jenkins Automation Server Sandbox Configuration
+name: jenkins-ci
+rootfs: ./rootfs
+hostname: jenkins-node
+share_hardware: false
+
+env:
+    JENKINS_HOME=/var/lib/jenkins
+
+run:
+    "java -jar /opt/jenkins/jenkins.war --httpPort=8080"

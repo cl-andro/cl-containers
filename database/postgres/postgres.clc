@@ -1,0 +1,12 @@
+# PostgreSQL Relational Database Sandbox Configuration
+name: postgres-db
+rootfs: ./rootfs
+hostname: postgres-node
+share_hardware: false
+
+env:
+    USER=postgres
+    PGDATA=/var/lib/postgresql/data
+
+run:
+    "/usr/lib/postgresql/15/bin/postgres"

@@ -1,0 +1,8 @@
+# Node.js Javascript Runtime Sandbox Configuration
+name: nodejs-runtime
+rootfs: ./rootfs
+hostname: node-node
+share_hardware: false
+
+run:
+    "node -v"

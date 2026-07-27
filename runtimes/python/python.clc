@@ -1,0 +1,8 @@
+# Python Executable Sandbox Configuration
+name: python-runtime
+rootfs: ./rootfs
+hostname: python-node
+share_hardware: false
+
+run:
+    "python3 --version"

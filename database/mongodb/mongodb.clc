@@ -1,0 +1,8 @@
+# MongoDB NoSQL Document Store Sandbox Configuration
+name: mongodb-server
+rootfs: ./rootfs
+hostname: mongodb-node
+share_hardware: false
+
+run:
+    "/usr/bin/mongod --dbpath /data/db --bind_ip_all"

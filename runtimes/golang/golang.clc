@@ -1,0 +1,8 @@
+# Golang Compiler Sandbox Configuration
+name: golang-compiler
+rootfs: ./rootfs
+hostname: go-node
+share_hardware: false
+
+run:
+    "go version"

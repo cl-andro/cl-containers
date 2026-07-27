@@ -1,0 +1,8 @@
+# Grafana Dashboard Visualization Sandbox Configuration
+name: grafana-dashboards
+rootfs: ./rootfs
+hostname: grafana-node
+share_hardware: false
+
+run:
+    "/opt/grafana/bin/grafana-server --homepath=/opt/grafana"
