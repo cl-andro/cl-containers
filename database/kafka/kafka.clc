@@ -1,0 +1,8 @@
+# kafka-stream Sandbox Configuration
+name: kafka-stream
+rootfs: ./rootfs
+hostname: kafka-node
+share_hardware: false
+
+run:
+    "/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties"

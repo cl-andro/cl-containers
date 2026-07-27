@@ -1,0 +1,8 @@
+# mediawiki-app Sandbox Configuration
+name: mediawiki-app
+rootfs: ./rootfs
+hostname: mediawiki-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080"

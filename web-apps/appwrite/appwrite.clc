@@ -1,0 +1,8 @@
+# appwrite-server Sandbox Configuration
+name: appwrite-server
+rootfs: ./rootfs
+hostname: appwrite-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080"

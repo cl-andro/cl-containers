@@ -1,0 +1,8 @@
+# scala-compiler Sandbox Configuration
+name: scala-compiler
+rootfs: ./rootfs
+hostname: scala-node
+share_hardware: false
+
+run:
+    "scala -version"

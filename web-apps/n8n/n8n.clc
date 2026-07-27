@@ -1,0 +1,8 @@
+# n8n-workflow Sandbox Configuration
+name: n8n-workflow
+rootfs: ./rootfs
+hostname: n8n-node
+share_hardware: false
+
+run:
+    "n8n start"

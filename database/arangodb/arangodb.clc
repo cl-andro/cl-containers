@@ -1,0 +1,8 @@
+# arango-db Sandbox Configuration
+name: arango-db
+rootfs: ./rootfs
+hostname: arangodb-node
+share_hardware: false
+
+run:
+    "/opt/arangodb/usr/sbin/arangod --server.endpoint tcp://0.0.0.0:8529"

@@ -1,0 +1,8 @@
+# drupal-app Sandbox Configuration
+name: drupal-app
+rootfs: ./rootfs
+hostname: drupal-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080 -t /opt/drupal"

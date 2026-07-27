@@ -1,0 +1,8 @@
+# meilisearch Sandbox Configuration
+name: meilisearch
+rootfs: ./rootfs
+hostname: meilisearch-node
+share_hardware: false
+
+run:
+    "/opt/meilisearch/meilisearch"

@@ -1,0 +1,8 @@
+# wireguard-vpn Sandbox Configuration
+name: wireguard-vpn
+rootfs: ./rootfs
+hostname: wireguard-node
+share_hardware: false
+
+run:
+    "wg show"

@@ -1,0 +1,8 @@
+# traefik-proxy Sandbox Configuration
+name: traefik-proxy
+rootfs: ./rootfs
+hostname: traefik-node
+share_hardware: false
+
+run:
+    "/opt/traefik/traefik"

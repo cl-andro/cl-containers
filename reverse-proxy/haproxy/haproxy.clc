@@ -1,0 +1,8 @@
+# haproxy-loadbalancer Sandbox Configuration
+name: haproxy-loadbalancer
+rootfs: ./rootfs
+hostname: haproxy-node
+share_hardware: false
+
+run:
+    "haproxy -v"

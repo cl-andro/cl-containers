@@ -1,0 +1,8 @@
+# dnsmasq-dns Sandbox Configuration
+name: dnsmasq-dns
+rootfs: ./rootfs
+hostname: dnsmasq-node
+share_hardware: false
+
+run:
+    "dnsmasq -k"

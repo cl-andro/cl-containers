@@ -1,0 +1,8 @@
+# mosquitto-broker Sandbox Configuration
+name: mosquitto-broker
+rootfs: ./rootfs
+hostname: mqtt-node
+share_hardware: false
+
+run:
+    "mosquitto"

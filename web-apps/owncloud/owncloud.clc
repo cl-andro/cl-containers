@@ -1,0 +1,8 @@
+# owncloud-app Sandbox Configuration
+name: owncloud-app
+rootfs: ./rootfs
+hostname: owncloud-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080"

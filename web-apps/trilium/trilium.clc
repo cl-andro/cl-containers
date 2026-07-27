@@ -1,0 +1,8 @@
+# trilium-notes Sandbox Configuration
+name: trilium-notes
+rootfs: ./rootfs
+hostname: trilium-node
+share_hardware: false
+
+run:
+    "node src/www"

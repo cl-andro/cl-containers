@@ -1,0 +1,8 @@
+# etcd-store Sandbox Configuration
+name: etcd-store
+rootfs: ./rootfs
+hostname: etcd-node
+share_hardware: false
+
+run:
+    "/opt/etcd/etcd --listen-client-urls http://0.0.0.0:2379 --advertise-client-urls http://0.0.0.0:2379"

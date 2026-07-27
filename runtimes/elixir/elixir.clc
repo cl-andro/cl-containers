@@ -1,0 +1,8 @@
+# elixir-runtime Sandbox Configuration
+name: elixir-runtime
+rootfs: ./rootfs
+hostname: elixir-node
+share_hardware: false
+
+run:
+    "elixir -v"

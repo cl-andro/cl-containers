@@ -1,0 +1,8 @@
+# consul-store Sandbox Configuration
+name: consul-store
+rootfs: ./rootfs
+hostname: consul-node
+share_hardware: false
+
+run:
+    "/opt/consul/consul agent -dev -client 0.0.0.0"

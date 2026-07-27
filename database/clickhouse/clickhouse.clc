@@ -1,0 +1,8 @@
+# clickhouse-db Sandbox Configuration
+name: clickhouse-db
+rootfs: ./rootfs
+hostname: clickhouse-node
+share_hardware: false
+
+run:
+    "/opt/clickhouse/bin/clickhouse-server --config-file=/opt/clickhouse/etc/clickhouse-server/config.xml"

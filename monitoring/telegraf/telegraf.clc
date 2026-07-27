@@ -1,0 +1,8 @@
+# telegraf-agent Sandbox Configuration
+name: telegraf-agent
+rootfs: ./rootfs
+hostname: telegraf-node
+share_hardware: false
+
+run:
+    "/opt/telegraf/usr/bin/telegraf"

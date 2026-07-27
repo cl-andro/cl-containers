@@ -1,0 +1,8 @@
+# rabbitmq-broker Sandbox Configuration
+name: rabbitmq-broker
+rootfs: ./rootfs
+hostname: rabbitmq-node
+share_hardware: false
+
+run:
+    "rabbitmq-server"

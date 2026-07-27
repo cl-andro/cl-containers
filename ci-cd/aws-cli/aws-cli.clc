@@ -1,0 +1,8 @@
+# aws-cli Sandbox Configuration
+name: aws-cli
+rootfs: ./rootfs
+hostname: aws-cli-node
+share_hardware: false
+
+run:
+    "aws --version"

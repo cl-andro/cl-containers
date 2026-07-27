@@ -1,0 +1,8 @@
+# zipkin-tracer Sandbox Configuration
+name: zipkin-tracer
+rootfs: ./rootfs
+hostname: zipkin-node
+share_hardware: false
+
+run:
+    "java -jar /opt/zipkin/zipkin.jar"

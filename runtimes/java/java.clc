@@ -1,0 +1,8 @@
+# java-runtime Sandbox Configuration
+name: java-runtime
+rootfs: ./rootfs
+hostname: java-node
+share_hardware: false
+
+run:
+    "java -version"

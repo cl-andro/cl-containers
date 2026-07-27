@@ -1,0 +1,8 @@
+# terraform-cli Sandbox Configuration
+name: terraform-cli
+rootfs: ./rootfs
+hostname: terraform-node
+share_hardware: false
+
+run:
+    "terraform --version"

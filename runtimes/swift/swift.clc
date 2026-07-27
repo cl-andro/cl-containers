@@ -1,0 +1,8 @@
+# swift-compiler Sandbox Configuration
+name: swift-compiler
+rootfs: ./rootfs
+hostname: swift-node
+share_hardware: false
+
+run:
+    "swift --version"

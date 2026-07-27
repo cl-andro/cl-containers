@@ -1,0 +1,8 @@
+# kotlin-compiler Sandbox Configuration
+name: kotlin-compiler
+rootfs: ./rootfs
+hostname: kotlin-node
+share_hardware: false
+
+run:
+    "kotlinc -version"

@@ -1,0 +1,8 @@
+# zookeeper-node Sandbox Configuration
+name: zookeeper-node
+rootfs: ./rootfs
+hostname: zookeeper-node
+share_hardware: false
+
+run:
+    "/opt/zookeeper/bin/zkServer.sh start-foreground"

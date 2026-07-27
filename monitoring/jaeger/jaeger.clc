@@ -1,0 +1,8 @@
+# jaeger-tracer Sandbox Configuration
+name: jaeger-tracer
+rootfs: ./rootfs
+hostname: jaeger-node
+share_hardware: false
+
+run:
+    "/opt/jaeger/jaeger-all-in-one"

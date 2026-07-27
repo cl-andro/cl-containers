@@ -1,0 +1,8 @@
+# loki-collector Sandbox Configuration
+name: loki-collector
+rootfs: ./rootfs
+hostname: loki-node
+share_hardware: false
+
+run:
+    "/opt/loki/loki --config.file=/opt/loki/loki-local-config.yaml"

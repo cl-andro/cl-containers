@@ -1,0 +1,8 @@
+# kubectl-cli Sandbox Configuration
+name: kubectl-cli
+rootfs: ./rootfs
+hostname: kubectl-node
+share_hardware: false
+
+run:
+    "kubectl version --client"

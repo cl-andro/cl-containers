@@ -1,0 +1,8 @@
+# bind9-dns Sandbox Configuration
+name: bind9-dns
+rootfs: ./rootfs
+hostname: bind9-node
+share_hardware: false
+
+run:
+    "/usr/sbin/named -g"

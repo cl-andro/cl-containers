@@ -1,0 +1,8 @@
+# nats-broker Sandbox Configuration
+name: nats-broker
+rootfs: ./rootfs
+hostname: nats-node
+share_hardware: false
+
+run:
+    "/opt/nats/nats-server -p 4222"

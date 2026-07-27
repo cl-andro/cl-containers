@@ -1,0 +1,8 @@
+# gcc-cpp-compiler Sandbox Configuration
+name: gcc-cpp-compiler
+rootfs: ./rootfs
+hostname: gcc-cpp-node
+share_hardware: false
+
+run:
+    "g++ --version"

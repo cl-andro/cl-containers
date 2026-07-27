@@ -1,0 +1,8 @@
+# fluentd-agent Sandbox Configuration
+name: fluentd-agent
+rootfs: ./rootfs
+hostname: fluentd-node
+share_hardware: false
+
+run:
+    "fluentd -c /etc/fluentd.conf"

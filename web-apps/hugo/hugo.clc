@@ -1,0 +1,8 @@
+# hugo-builder Sandbox Configuration
+name: hugo-builder
+rootfs: ./rootfs
+hostname: hugo-node
+share_hardware: false
+
+run:
+    "/opt/hugo/hugo version"

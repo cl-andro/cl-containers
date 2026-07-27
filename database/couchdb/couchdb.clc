@@ -1,0 +1,8 @@
+# couch-db Sandbox Configuration
+name: couch-db
+rootfs: ./rootfs
+hostname: couchdb-node
+share_hardware: false
+
+run:
+    "/opt/couchdb/bin/couchdb"

@@ -1,0 +1,8 @@
+# influxdb-db Sandbox Configuration
+name: influxdb-db
+rootfs: ./rootfs
+hostname: influxdb-node
+share_hardware: false
+
+run:
+    "/opt/influxdb/usr/bin/influxd"

@@ -1,0 +1,8 @@
+# fluentbit-agent Sandbox Configuration
+name: fluentbit-agent
+rootfs: ./rootfs
+hostname: fluentbit-node
+share_hardware: false
+
+run:
+    "/opt/fluentbit/bin/fluent-bit -i cpu -o stdout"

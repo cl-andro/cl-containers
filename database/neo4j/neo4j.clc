@@ -1,0 +1,8 @@
+# neo4j-db Sandbox Configuration
+name: neo4j-db
+rootfs: ./rootfs
+hostname: neo4j-node
+share_hardware: false
+
+run:
+    "/opt/neo4j/bin/neo4j console"

@@ -1,0 +1,8 @@
+# curl-cli Sandbox Configuration
+name: curl-cli
+rootfs: ./rootfs
+hostname: curl-cli-node
+share_hardware: false
+
+run:
+    "curl --version"

@@ -1,0 +1,8 @@
+# activemq-broker Sandbox Configuration
+name: activemq-broker
+rootfs: ./rootfs
+hostname: activemq-node
+share_hardware: false
+
+run:
+    "/opt/activemq/bin/activemq console"

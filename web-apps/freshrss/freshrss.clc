@@ -1,0 +1,8 @@
+# freshrss-app Sandbox Configuration
+name: freshrss-app
+rootfs: ./rootfs
+hostname: freshrss-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080 -t /opt/freshrss/p"

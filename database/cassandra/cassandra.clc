@@ -1,0 +1,8 @@
+# cassandra-db Sandbox Configuration
+name: cassandra-db
+rootfs: ./rootfs
+hostname: cassandra-node
+share_hardware: false
+
+run:
+    "/opt/cassandra/bin/cassandra -f"

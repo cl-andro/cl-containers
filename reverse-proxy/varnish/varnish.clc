@@ -1,0 +1,8 @@
+# varnish-cache Sandbox Configuration
+name: varnish-cache
+rootfs: ./rootfs
+hostname: varnish-node
+share_hardware: false
+
+run:
+    "varnishd -V"

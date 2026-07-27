@@ -1,0 +1,8 @@
+# gatsby-builder Sandbox Configuration
+name: gatsby-builder
+rootfs: ./rootfs
+hostname: gatsby-node
+share_hardware: false
+
+run:
+    "gatsby --version"

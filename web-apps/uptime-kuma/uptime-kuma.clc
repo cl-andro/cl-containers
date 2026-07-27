@@ -1,0 +1,8 @@
+# uptime-kuma Sandbox Configuration
+name: uptime-kuma
+rootfs: ./rootfs
+hostname: uptime-kuma-node
+share_hardware: false
+
+run:
+    "node server/server.js"

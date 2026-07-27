@@ -1,0 +1,8 @@
+# r-runtime Sandbox Configuration
+name: r-runtime
+rootfs: ./rootfs
+hostname: r-lang-node
+share_hardware: false
+
+run:
+    "R --version"

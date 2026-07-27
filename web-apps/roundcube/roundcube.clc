@@ -1,0 +1,8 @@
+# roundcube-mail Sandbox Configuration
+name: roundcube-mail
+rootfs: ./rootfs
+hostname: roundcube-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080"

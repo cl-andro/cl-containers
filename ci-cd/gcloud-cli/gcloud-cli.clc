@@ -1,0 +1,8 @@
+# gcloud-cli Sandbox Configuration
+name: gcloud-cli
+rootfs: ./rootfs
+hostname: gcloud-cli-node
+share_hardware: false
+
+run:
+    "gcloud --version"

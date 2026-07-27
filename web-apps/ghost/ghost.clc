@@ -1,0 +1,8 @@
+# ghost-blog Sandbox Configuration
+name: ghost-blog
+rootfs: ./rootfs
+hostname: ghost-node
+share_hardware: false
+
+run:
+    "node current/index.js"

@@ -1,0 +1,8 @@
+# logstash-pipeline Sandbox Configuration
+name: logstash-pipeline
+rootfs: ./rootfs
+hostname: logstash-node
+share_hardware: false
+
+run:
+    "/opt/logstash/bin/logstash -e ''"

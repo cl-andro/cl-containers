@@ -1,0 +1,8 @@
+# node-red-flow Sandbox Configuration
+name: node-red-flow
+rootfs: ./rootfs
+hostname: nodered-node
+share_hardware: false
+
+run:
+    "node-red"

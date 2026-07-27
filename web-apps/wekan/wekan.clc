@@ -1,0 +1,8 @@
+# wekan-app Sandbox Configuration
+name: wekan-app
+rootfs: ./rootfs
+hostname: wekan-node
+share_hardware: false
+
+run:
+    "node main.js"

@@ -1,0 +1,8 @@
+# squid-proxy Sandbox Configuration
+name: squid-proxy
+rootfs: ./rootfs
+hostname: squid-node
+share_hardware: false
+
+run:
+    "squid -v"

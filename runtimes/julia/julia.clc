@@ -1,0 +1,8 @@
+# julia-runtime Sandbox Configuration
+name: julia-runtime
+rootfs: ./rootfs
+hostname: julia-node
+share_hardware: false
+
+run:
+    "julia --version"

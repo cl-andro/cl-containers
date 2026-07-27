@@ -1,0 +1,8 @@
+# netdata-monitor Sandbox Configuration
+name: netdata-monitor
+rootfs: ./rootfs
+hostname: netdata-node
+share_hardware: false
+
+run:
+    "/opt/netdata/usr/sbin/netdata -D"

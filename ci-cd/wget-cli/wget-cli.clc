@@ -1,0 +1,8 @@
+# wget-cli Sandbox Configuration
+name: wget-cli
+rootfs: ./rootfs
+hostname: wget-cli-node
+share_hardware: false
+
+run:
+    "wget --version"

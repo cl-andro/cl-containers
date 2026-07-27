@@ -1,0 +1,8 @@
+# keydb-db Sandbox Configuration
+name: keydb-db
+rootfs: ./rootfs
+hostname: keydb-node
+share_hardware: false
+
+run:
+    "keydb-server"

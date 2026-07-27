@@ -1,0 +1,8 @@
+# redmine-app Sandbox Configuration
+name: redmine-app
+rootfs: ./rootfs
+hostname: redmine-node
+share_hardware: false
+
+run:
+    "rails server -b 0.0.0.0"

@@ -1,0 +1,8 @@
+# dotnet-sdk Sandbox Configuration
+name: dotnet-sdk
+rootfs: ./rootfs
+hostname: dotnet-node
+share_hardware: false
+
+run:
+    "dotnet --version"

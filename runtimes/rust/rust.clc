@@ -1,0 +1,8 @@
+# rust-compiler Sandbox Configuration
+name: rust-compiler
+rootfs: ./rootfs
+hostname: rust-node
+share_hardware: false
+
+run:
+    "rustc --version"

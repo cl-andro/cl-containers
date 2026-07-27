@@ -1,0 +1,8 @@
+# typesense-search Sandbox Configuration
+name: typesense-search
+rootfs: ./rootfs
+hostname: typesense-node
+share_hardware: false
+
+run:
+    "/opt/typesense/typesense-server --data-dir /opt/typesense/data --api-key=xyz"

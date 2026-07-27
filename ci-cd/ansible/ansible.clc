@@ -1,0 +1,8 @@
+# ansible-cli Sandbox Configuration
+name: ansible-cli
+rootfs: ./rootfs
+hostname: ansible-node
+share_hardware: false
+
+run:
+    "ansible --version"

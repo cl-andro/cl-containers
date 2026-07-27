@@ -1,0 +1,8 @@
+# kanboard-app Sandbox Configuration
+name: kanboard-app
+rootfs: ./rootfs
+hostname: kanboard-node
+share_hardware: false
+
+run:
+    "php -S 0.0.0.0:8080 -t /opt/kanboard"

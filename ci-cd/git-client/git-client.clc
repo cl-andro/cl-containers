@@ -1,0 +1,8 @@
+# git-client Sandbox Configuration
+name: git-client
+rootfs: ./rootfs
+hostname: git-client-node
+share_hardware: false
+
+run:
+    "git --version"

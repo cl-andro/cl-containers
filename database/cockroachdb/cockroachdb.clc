@@ -1,0 +1,8 @@
+# cockroach-db Sandbox Configuration
+name: cockroach-db
+rootfs: ./rootfs
+hostname: cockroachdb-node
+share_hardware: false
+
+run:
+    "/opt/cockroach/cockroach start-single-node --insecure --listen-addr=0.0.0.0:26257"

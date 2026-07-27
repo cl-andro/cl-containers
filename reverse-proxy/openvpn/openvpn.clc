@@ -1,0 +1,8 @@
+# openvpn-vpn Sandbox Configuration
+name: openvpn-vpn
+rootfs: ./rootfs
+hostname: openvpn-node
+share_hardware: false
+
+run:
+    "openvpn --config /etc/openvpn/server.conf"

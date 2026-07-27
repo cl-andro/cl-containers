@@ -1,0 +1,8 @@
+# scylla-db Sandbox Configuration
+name: scylla-db
+rootfs: ./rootfs
+hostname: scylladb-node
+share_hardware: false
+
+run:
+    "/opt/scylla/bin/scylla --developer-mode 1"
