@@ -6,9 +6,9 @@ mkdir -p /opt/mongodb
 cd /opt/mongodb
 
 if command -v wget >/dev/null 2>&1; then
-    wget -O mongo.tgz https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-debian11-6.0.8.tgz
+    wget -O mongo.tgz https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-debian12-7.0.5.tgz
 else
-    curl -L -o mongo.tgz https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-debian11-6.0.8.tgz
+    curl -L -o mongo.tgz https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-debian12-7.0.5.tgz
 fi
 
 tar -xzf mongo.tgz --strip-components=1
