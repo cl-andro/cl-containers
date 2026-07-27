@@ -26,8 +26,11 @@ fi
 tar -xzf libaio.tar.gz --strip-components=1
 make CC=gcc -j2
 cp src/libaio.so.1.0.2 /opt/mysql/lib/
+cp src/libaio.so.1.0.2 /opt/mysql/lib/private/
 # Ensure proper symlinks
 cd /opt/mysql/lib
+ln -sf libaio.so.1.0.2 libaio.so.1 || true
+cd /opt/mysql/lib/private
 ln -sf libaio.so.1.0.2 libaio.so.1 || true
 cd /opt/mysql
 rm -rf /tmp/libaio-build
