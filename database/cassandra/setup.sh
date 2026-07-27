@@ -1,8 +1,11 @@
 #!/bin/sh
 set -e
-echo "=== cassandra-db Sandbox Setup ==="
+echo "=== Cassandra Sandbox Provisioning (Self-Contained) ==="
+
+# 1. Download and install Cassandra
 mkdir -p /opt/cassandra
 cd /opt/cassandra
+echo "Downloading Cassandra..."
 if command -v wget >/dev/null 2>&1; then
     wget -O cassandra.tar.gz https://archive.apache.org/dist/cassandra/4.1.2/apache-cassandra-4.1.2-bin.tar.gz
 else
@@ -11,4 +14,20 @@ fi
 tar -xzf cassandra.tar.gz --strip-components=1
 rm -f cassandra.tar.gz
 
-echo "=== cassandra-db Sandbox Forged ==="
+# 2. Download and install a self-contained JRE 17
+mkdir -p /opt/jre
+cd /opt/jre
+echo "Downloading JRE 17..."
+if command -v wget >/dev/null 2>&1; then
+    wget -O jre.tar.gz https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jre_x64_linux_hotspot_17.0.7_7.tar.gz
+else
+    curl -L -o jre.tar.gz https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jre_x64_linux_hotspot_17.0.7_7.tar.gz
+fi
+tar -xzf jre.tar.gz --strip-components=1
+rm -f jre.tar.gz
+
+# Create required runtime directories inside guest
+mkdir -p /var/lib/cassandra
+mkdir -p /var/log/cassandra
+
+echo "=== Cassandra Sandbox Forged ==="
