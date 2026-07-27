@@ -15,6 +15,21 @@ fi
 tar -xf mysql.tar.xz --strip-components=1
 rm -f mysql.tar.xz
 
+# Download and extract libaio1 (required by InnoDB) to /opt/mysql/lib
+mkdir -p /tmp/libaio-build
+cd /tmp/libaio-build
+if command -v wget >/dev/null 2>&1; then
+    wget -O libaio.deb http://ftp.de.debian.org/debian/pool/main/liba/libaio/libaio1t64_0.3.113-8_amd64.deb
+else
+    curl -L -o libaio.deb http://ftp.de.debian.org/debian/pool/main/liba/libaio/libaio1t64_0.3.113-8_amd64.deb
+fi
+dpkg-deb -x libaio.deb .
+cp usr/lib/x86_64-linux-gnu/libaio.so.1* /opt/mysql/lib/
+# Ensure proper symlinks
+cd /opt/mysql/lib
+ln -sf libaio.so.1.0.2 libaio.so.1 || true
+cd /opt/mysql
+
 mkdir -p /opt/mysql/data
 mkdir -p /opt/mysql/run
 mkdir -p /opt/mysql/log
