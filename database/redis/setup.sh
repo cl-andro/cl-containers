@@ -13,8 +13,8 @@ fi
 
 tar -xzf redis.tar.gz --strip-components=1
 
-CC=gcc make -j2
-make PREFIX=/opt/redis install
+CC=gcc make MALLOC=libc -j2
+make MALLOC=libc PREFIX=/opt/redis install
 
 cd /
 rm -rf /tmp/redis-build
