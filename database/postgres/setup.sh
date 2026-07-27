@@ -26,6 +26,4 @@ rm -rf /tmp/postgres-build
 mkdir -p /opt/postgres/data
 mkdir -p /opt/postgres/run
 
-/opt/postgres/bin/initdb -D /opt/postgres/data --nosync || true
-
 echo "=== PostgreSQL Sandbox Forged ==="

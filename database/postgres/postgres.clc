@@ -9,4 +9,5 @@ env:
     PGDATA=/opt/postgres/data
 
 run:
+    "if [ ! -f /opt/postgres/data/postgresql.conf ]; then /opt/postgres/bin/initdb -D /opt/postgres/data --nosync; fi"
     "/opt/postgres/bin/postgres -D /opt/postgres/data -k /opt/postgres/run"
