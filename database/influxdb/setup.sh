@@ -8,8 +8,9 @@ if command -v wget >/dev/null 2>&1; then
 else
     curl -L -o influx.tar.gz https://dl.influxdata.com/influxdb/releases/influxdb-1.8.10_linux_amd64.tar.gz
 fi
-tar -xzf influx.tar.gz --strip-components=1
-rm -f influx.tar.gz
+tar -xzf influx.tar.gz
+mv influxdb-*/* .
+rm -rf influxdb-* influx.tar.gz
 
 mkdir -p /var/lib/influxdb
 mkdir -p /etc/influxdb
