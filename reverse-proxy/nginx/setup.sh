@@ -17,7 +17,7 @@ CC=gcc ./configure --prefix=/opt/nginx \
             --without-http_rewrite_module \
             --without-http_gzip_module
 
-make -j$(nproc)
+make -j2
 make install
 
 # Clean up build files

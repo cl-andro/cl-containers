@@ -15,7 +15,7 @@ tar -xzf postgres.tar.gz --strip-components=1
 
 CC=gcc ./configure --prefix=/opt/postgres --without-readline --without-zlib
 
-make -j$(nproc)
+make -j2
 make install
 
 # Clean up build files
