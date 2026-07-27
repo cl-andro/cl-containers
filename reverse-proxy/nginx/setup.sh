@@ -13,7 +13,7 @@ fi
 
 tar -xzf nginx.tar.gz --strip-components=1
 
-./configure --prefix=/opt/nginx \
+CC=gcc ./configure --prefix=/opt/nginx \
             --without-http_rewrite_module \
             --without-http_gzip_module
 
