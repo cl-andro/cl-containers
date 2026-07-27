@@ -5,4 +5,4 @@ hostname: memcached-node
 share_hardware: false
 
 run:
-    "/usr/bin/memcached -u nobody -p 11211"
+    "/opt/memcached/bin/memcached -p 11211"
