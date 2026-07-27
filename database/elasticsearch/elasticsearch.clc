@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: elasticsearch-node
 share_hardware: false
 
+env:
+    ES_JAVA_OPTS="-Xms512m -Xmx512m"
+
 run:
-    "/opt/elasticsearch/bin/elasticsearch"
+    "/opt/elasticsearch/bin/elasticsearch -E discovery.type=single-node -E http.host=0.0.0.0"
