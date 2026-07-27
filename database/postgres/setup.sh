@@ -1,17 +1,31 @@
 #!/bin/sh
 set -e
-echo "=== PostgreSQL Sandbox Provisioning ==="
-mkdir -p /var/lib/postgresql/data
-mkdir -p /var/run/postgresql
-mkdir -p /opt/postgres/bin
+echo "=== PostgreSQL Sandbox Provisioning (Self-Contained Build) ==="
 
-if [ -x /usr/lib/postgresql/*/bin/initdb ]; then
-    INITDB=$(ls /usr/lib/postgresql/*/bin/initdb | head -n 1)
-    POSTGRES=$(ls /usr/lib/postgresql/*/bin/postgres | head -n 1)
-    $INITDB -D /var/lib/postgresql/data --nosync || true
-    ln -sf "$POSTGRES" /opt/postgres/bin/postgres
+mkdir -p /tmp/postgres-build
+cd /tmp/postgres-build
+
+if command -v wget >/dev/null 2>&1; then
+    wget -O postgres.tar.gz https://ftp.postgresql.org/pub/source/v15.3/postgresql-15.3.tar.gz
 else
-    echo "Error: PostgreSQL is not installed on the host. Run: apt-get install postgresql"
-    exit 1
+    curl -L -o postgres.tar.gz https://ftp.postgresql.org/pub/source/v15.3/postgresql-15.3.tar.gz
 fi
+
+tar -xzf postgres.tar.gz --strip-components=1
+
+CC=gcc ./configure --prefix=/opt/postgres --without-readline --without-zlib
+
+make -j$(nproc)
+make install
+
+# Clean up build files
+cd /
+rm -rf /tmp/postgres-build
+
+# Initialize data and run directories
+mkdir -p /opt/postgres/data
+mkdir -p /opt/postgres/run
+
+/opt/postgres/bin/initdb -D /opt/postgres/data --nosync || true
+
 echo "=== PostgreSQL Sandbox Forged ==="
