@@ -21,7 +21,7 @@ echo "✓ Gitea binary installed successfully."
 
 # 3. Create default minimal configuration (SQLite)
 cat <<EOF > /opt/gitea/custom/conf/app.ini
-RUN_USER = root
+RUN_USER = ${INVOKING_USER:-root}
 
 [database]
 DB_TYPE = sqlite3
