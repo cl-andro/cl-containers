@@ -4,6 +4,9 @@ rootfs: ./rootfs
 hostname: nginx-node
 share_hardware: false
 
+env:
+    CLC_DROP_PRIVILEGES=false
+
 mount_external:
     "/etc/nginx" -> "/etc/nginx"
 
