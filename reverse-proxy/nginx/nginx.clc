@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: nginx-node
 share_hardware: false
 
+mount_external:
+    "/etc/nginx" -> "/etc/nginx"
+
 run:
     "/usr/sbin/nginx -g 'daemon off;'"
