@@ -35,6 +35,21 @@ sed -i 's/#-XX:+UseG1GC/-XX:+UseG1GC/' /opt/cassandra/conf/jvm11-server.options
 sed -i 's/#-XX:+ParallelRefProcEnabled/-XX:+ParallelRefProcEnabled/' /opt/cassandra/conf/jvm11-server.options
 sed -i 's/#-XX:G1HeapRegionSize=16m/-XX:G1HeapRegionSize=16m/' /opt/cassandra/conf/jvm11-server.options
 
+# Add Java 17 module opens for Cassandra runtime reflective access compatibility
+cat << 'EOF' >> /opt/cassandra/conf/jvm11-server.options
+--add-opens java.base/java.io=ALL-UNNAMED
+--add-opens java.base/java.nio=ALL-UNNAMED
+--add-opens java.base/sun.nio.ch=ALL-UNNAMED
+--add-opens java.base/java.util=ALL-UNNAMED
+--add-opens java.base/java.util.concurrent=ALL-UNNAMED
+--add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED
+--add-opens java.base/java.lang=ALL-UNNAMED
+--add-opens java.base/java.math=ALL-UNNAMED
+--add-opens java.base/java.net=ALL-UNNAMED
+--add-opens java.base/java.text=ALL-UNNAMED
+--add-opens java.base/java.security=ALL-UNNAMED
+EOF
+
 # Create required runtime directories inside guest
 mkdir -p /var/lib/cassandra
 mkdir -p /var/log/cassandra
