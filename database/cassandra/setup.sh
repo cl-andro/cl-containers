@@ -27,6 +27,7 @@ tar -xzf jre.tar.gz --strip-components=1
 rm -f jre.tar.gz
 
 # Convert JVM options from removed CMS GC to modern G1 GC (since Java 17 removed CMS)
+sed -i '/ConcMarkSweep/s/^-XX:/# -XX:/' /opt/cassandra/conf/jvm11-server.options
 sed -i '/CMS/s/^-XX:/# -XX:/' /opt/cassandra/conf/jvm11-server.options
 sed -i '/SurvivorRatio/s/^-XX:/# -XX:/' /opt/cassandra/conf/jvm11-server.options
 sed -i '/MaxTenuringThreshold/s/^-XX:/# -XX:/' /opt/cassandra/conf/jvm11-server.options
