@@ -26,6 +26,15 @@ fi
 tar -xzf jre.tar.gz --strip-components=1
 rm -f jre.tar.gz
 
+# Convert JVM options from removed CMS GC to modern G1 GC (since Java 17 removed CMS)
+sed -i 's/^-XX:+UseConcMarkSweepGC/# -XX:+UseConcMarkSweepGC/' /opt/cassandra/conf/jvm11-server.options
+sed -i 's/^-XX:+CMS/# -XX:+CMS/' /opt/cassandra/conf/jvm11-server.options
+sed -i 's/^-XX:SurvivorRatio/# -XX:SurvivorRatio/' /opt/cassandra/conf/jvm11-server.options
+sed -i 's/^-XX:MaxTenuringThreshold/# -XX:MaxTenuringThreshold/' /opt/cassandra/conf/jvm11-server.options
+sed -i 's/#-XX:+UseG1GC/-XX:+UseG1GC/' /opt/cassandra/conf/jvm11-server.options
+sed -i 's/#-XX:+ParallelRefProcEnabled/-XX:+ParallelRefProcEnabled/' /opt/cassandra/conf/jvm11-server.options
+sed -i 's/#-XX:G1HeapRegionSize=16m/-XX:G1HeapRegionSize=16m/' /opt/cassandra/conf/jvm11-server.options
+
 # Create required runtime directories inside guest
 mkdir -p /var/lib/cassandra
 mkdir -p /var/log/cassandra
