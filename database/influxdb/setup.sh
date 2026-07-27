@@ -11,4 +11,7 @@ fi
 tar -xzf influx.tar.gz --strip-components=1
 rm -f influx.tar.gz
 
+mkdir -p /var/lib/influxdb
+mkdir -p /etc/influxdb
+
 echo "=== influxdb-db Sandbox Forged ==="
