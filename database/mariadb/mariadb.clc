@@ -5,4 +5,5 @@ hostname: mariadb-node
 share_hardware: false
 
 run:
-    "/usr/sbin/mariadbd --user=mysql"
+    "if [ ! -d /opt/mariadb/data/mysql ]; then /opt/mariadb/scripts/mariadb-install-db --datadir=/opt/mariadb/data --basedir=/opt/mariadb --auth-root-authentication-method=normal; fi"
+    "/opt/mariadb/bin/mariadbd --datadir=/opt/mariadb/data --port=3306 --socket=/opt/mariadb/run/mariadb.sock"
