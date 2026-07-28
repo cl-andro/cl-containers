@@ -5,4 +5,4 @@ hostname: haproxy-node
 share_hardware: false
 
 run:
-    "haproxy -v"
+    "/opt/haproxy/haproxy -f /etc/haproxy/haproxy.cfg"
