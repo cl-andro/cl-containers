@@ -19,7 +19,11 @@ mkdir -p /var/lib/caddy/config
 
 # 3. Create Caddyfile
 cat <<EOF > Caddyfile
-localhost:8080 {
+{
+    auto_https off
+}
+
+:8080 {
     respond "Hello from Caddy!"
 }
 EOF
