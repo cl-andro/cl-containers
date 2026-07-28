@@ -53,6 +53,7 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`kafka`** | Event Streaming | `9092` | KRaft standalone event streamer on JRE 17 | Verified ✓ |
 | **`activemq`** | Message Broker | `61616` (JMS) / `8161` (Web) | Multi-protocol message broker on JRE 17 | Verified ✓ |
 | **`clickhouse`** | Database | `8123` (HTTP) / `9000` (Native) | Columnar analytical database | Verified ✓ |
+| **`prometheus`** | Monitoring | `9090` | Time-series system metrics monitor | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
@@ -63,5 +64,4 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 
 We are actively validating the top 20 most popular developer containers. The remaining message brokers and monitoring tools undergoing sequence verification are:
 
-19. **`prometheus`** *(Metrics & Monitoring)*
 20. **`grafana`** *(Visualization)*
