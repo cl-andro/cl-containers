@@ -11,4 +11,7 @@ fi
 tar -xzf etcd.tar.gz --strip-components=1
 rm -f etcd.tar.gz
 
+# 2. Create dedicated data directory
+mkdir -p /var/lib/etcd
+
 echo "=== etcd-store Sandbox Forged ==="

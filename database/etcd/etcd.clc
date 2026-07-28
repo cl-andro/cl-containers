@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: etcd-node
 share_hardware: false
 
+limit_memory: 256M
+limit_cpu: 0.5
+
 run:
-    "/opt/etcd/etcd --listen-client-urls http://0.0.0.0:2379 --advertise-client-urls http://0.0.0.0:2379"
+    "/opt/etcd/etcd --data-dir=/var/lib/etcd --listen-client-urls http://0.0.0.0:2379 --advertise-client-urls http://0.0.0.0:2379"
