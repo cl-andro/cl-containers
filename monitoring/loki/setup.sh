@@ -15,4 +15,45 @@ mv loki-linux-amd64 loki
 chmod +x loki
 rm -f loki.zip
 
+# 2. Create persistent data directories
+mkdir -p /var/lib/loki
+
+# 3. Create local configuration file
+mkdir -p /etc/loki
+cat <<EOF > /etc/loki/loki.yaml
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+  grpc_listen_port: 9096
+
+common:
+  instance_addr: 127.0.0.1
+  path_prefix: /var/lib/loki
+  storage:
+    filesystem:
+      chunks_directory: /var/lib/loki/chunks
+      rules_directory: /var/lib/loki/rules
+  replication_factor: 1
+  ring:
+    kvstore:
+      store: inmemory
+
+query_range:
+  results_cache:
+    cache:
+      embedded_collector:
+        store: inmemory
+
+schema_config:
+  configs:
+    - from: 2020-10-24
+      store: boltdb-shipper
+      object_store: filesystem
+      schema: v11
+      index:
+        prefix: index_
+        period: 24h
+EOF
+
 echo "=== loki-collector Sandbox Forged ==="

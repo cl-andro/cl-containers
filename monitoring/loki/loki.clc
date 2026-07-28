@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: loki-node
 share_hardware: false
 
+limit_memory: 512M
+limit_cpu: 0.5
+
 run:
-    "/opt/loki/loki --config.file=/opt/loki/loki-local-config.yaml"
+    "/opt/loki/loki --config.file=/etc/loki/loki.yaml"
