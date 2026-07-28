@@ -4,5 +4,10 @@ rootfs: ./rootfs
 hostname: activemq-node
 share_hardware: false
 
+env:
+    JAVA_HOME=/opt/jre
+    PATH=/opt/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    ACTIVEMQ_OPTS="-Xms256m -Xmx512m"
+
 run:
     "/opt/activemq/bin/activemq console"
