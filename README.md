@@ -64,12 +64,13 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`nats`** | Message Broker | `4222` | NATS high-performance pub/sub message broker | Verified ✓ |
 | **`loki`** | Monitoring / Logs | `3100` | Log aggregation engine from Grafana | Verified ✓ |
 | **`jenkins`** | CI/CD | `8085` | Automation build server running on self-contained JRE 17 | Verified ✓ |
+| **`uptime-kuma`** | Monitoring / Status | `3001` | Self-hosted monitoring dashboard on self-contained Node.js 18 | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
 
 ---
 
-## 🚀 Priority Releases Queue (Top 20)
+## 🚀 Priority Releases Queue (Top 30)
 
-We have successfully verified and released the top 20 most popular developer container environments! We will now expand to the next milestone block (21-30).
+We have successfully verified and released the top 30 most popular developer container environments! We will continue expansion to further milestones.
