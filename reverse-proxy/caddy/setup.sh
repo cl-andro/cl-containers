@@ -3,12 +3,14 @@ set -e
 echo "=== Caddy Sandbox Provisioning ==="
 mkdir -p /opt/caddy
 cd /opt/caddy
-# 1. Download Caddy raw binary directly
+# 1. Download Caddy release tarball from GitHub
 if command -v wget >/dev/null 2>&1; then
-    wget -O caddy "https://caddyserver.com/api/download?os=linux&arch=amd64"
+    wget -O caddy.tar.gz "https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_linux_amd64.tar.gz"
 else
-    curl -L -o caddy "https://caddyserver.com/api/download?os=linux&arch=amd64"
+    curl -L -o caddy.tar.gz "https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_linux_amd64.tar.gz"
 fi
+tar -xzf caddy.tar.gz caddy
+rm -f caddy.tar.gz
 chmod +x caddy
 
 # 2. Create state directories
@@ -17,10 +19,5 @@ mkdir -p /var/lib/caddy/config
 
 # 3. Create Caddyfile
 echo 'localhost:8080 { respond "Hello from Caddy!" }' > Caddyfile
-
-# 4. Apply permissions for unprivileged execution
-if [ -n "$INVOKING_USER" ] && [ "$INVOKING_USER" != "root" ]; then
-    chown -R "$INVOKING_USER" /var/lib/caddy
-fi
 
 echo "=== Caddy Sandbox Forged ==="
