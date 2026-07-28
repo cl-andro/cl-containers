@@ -10,4 +10,10 @@ else
 fi
 tar -xzf grafana.tar.gz --strip-components=1
 rm -f grafana.tar.gz
+
+# Apply ownership permissions for unprivileged execution
+if [ -n "$INVOKING_USER" ] && [ "$INVOKING_USER" != "root" ]; then
+    chown -R "$INVOKING_USER" /opt/grafana
+fi
+
 echo "=== Grafana Sandbox Forged ==="
