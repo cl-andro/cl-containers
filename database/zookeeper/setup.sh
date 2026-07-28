@@ -10,6 +10,18 @@ else
 fi
 tar -xzf zk.tar.gz --strip-components=1
 rm -f zk.tar.gz
-cp conf/zoo_sample.cfg conf/zoo.cfg
+
+# 2. Configure directories
+mkdir -p /var/run /var/lib/zookeeper/data /var/lib/zookeeper/log
+
+# 3. Create clean zoo.cfg
+cat <<EOF > conf/zoo.cfg
+tickTime=2000
+dataDir=/var/lib/zookeeper/data
+dataLogDir=/var/lib/zookeeper/log
+clientPort=2181
+initLimit=5
+syncLimit=2
+EOF
 
 echo "=== zookeeper-node Sandbox Forged ==="
