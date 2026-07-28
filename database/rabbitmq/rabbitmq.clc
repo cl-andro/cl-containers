@@ -4,5 +4,13 @@ rootfs: ./rootfs
 hostname: rabbitmq-node
 share_hardware: false
 
+env:
+    PATH=/opt/erlang/bin:/opt/rabbitmq/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    ERLANG_HOME=/opt/erlang
+    HOME=/var/lib/rabbitmq
+    RABBITMQ_BASE=/var/lib/rabbitmq
+    RABBITMQ_LOGS=/var/log/rabbitmq/rabbit.log
+    RABBITMQ_SASL_LOGS=/var/log/rabbitmq/rabbit-sasl.log
+
 run:
     "rabbitmq-server"
