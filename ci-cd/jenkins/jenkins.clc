@@ -4,8 +4,13 @@ rootfs: ./rootfs
 hostname: jenkins-node
 share_hardware: false
 
+limit_memory: 1G
+limit_cpu: 1.0
+
 env:
     JENKINS_HOME=/var/lib/jenkins
+    JAVA_HOME=/opt/jre
+    PATH=/opt/jre/bin:/usr/bin:/bin
 
 run:
-    "java -jar /opt/jenkins/jenkins.war --httpPort=8080"
+    "java -jar /opt/jenkins/jenkins.war --httpPort=8085"
