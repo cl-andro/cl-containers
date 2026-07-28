@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: nats-node
 share_hardware: false
 
+limit_memory: 128M
+limit_cpu: 0.5
+
 run:
     "/opt/nats/nats-server -p 4222"
