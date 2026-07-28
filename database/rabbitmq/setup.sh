@@ -11,7 +11,7 @@ if command -v wget >/dev/null 2>&1; then
 else
     curl -L -o erlang.tar.gz https://github.com/gleam-community/erlang-linux-builds/releases/download/OTP-26.2.5.20/erlang-26.2.5.20-x64-glibc.tar.gz
 fi
-tar -xzf erlang.tar.gz --strip-components=1
+tar -xzf erlang.tar.gz
 rm -f erlang.tar.gz
 
 # 2. Download and extract RabbitMQ 3.13.7
