@@ -10,4 +10,13 @@ else
 fi
 tar -xzf prometheus.tar.gz --strip-components=1
 rm -f prometheus.tar.gz
+
+# Create TSDB storage directory
+mkdir -p /var/lib/prometheus
+
+# Apply ownership permissions for unprivileged execution
+if [ -n "$INVOKING_USER" ] && [ "$INVOKING_USER" != "root" ]; then
+    chown -R "$INVOKING_USER" /var/lib/prometheus
+fi
+
 echo "=== Prometheus Sandbox Forged ==="
