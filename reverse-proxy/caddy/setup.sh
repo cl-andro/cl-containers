@@ -18,6 +18,10 @@ mkdir -p /var/lib/caddy/data
 mkdir -p /var/lib/caddy/config
 
 # 3. Create Caddyfile
-echo 'localhost:8080 { respond "Hello from Caddy!" }' > Caddyfile
+cat <<EOF > Caddyfile
+localhost:8080 {
+    respond "Hello from Caddy!"
+}
+EOF
 
 echo "=== Caddy Sandbox Forged ==="
