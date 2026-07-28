@@ -54,6 +54,7 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`activemq`** | Message Broker | `61616` (JMS) / `8161` (Web) | Multi-protocol message broker on JRE 17 | Verified ✓ |
 | **`clickhouse`** | Database | `8123` (HTTP) / `9000` (Native) | Columnar analytical database | Verified ✓ |
 | **`prometheus`** | Monitoring | `9090` | Time-series system metrics monitor | Verified ✓ |
+| **`grafana`** | Visualization | `3000` | Metric dashboard dashboard aggregator | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
@@ -62,6 +63,4 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 
 ## 🚀 Priority Releases Queue (Top 20)
 
-We are actively validating the top 20 most popular developer containers. The remaining message brokers and monitoring tools undergoing sequence verification are:
-
-20. **`grafana`** *(Visualization)*
+We have successfully verified and released the top 20 most popular developer container environments! We will now expand to the next milestone block (21-30).
