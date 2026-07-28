@@ -4,5 +4,10 @@ rootfs: ./rootfs
 hostname: kafka-node
 share_hardware: false
 
+env:
+    JAVA_HOME=/opt/jre
+    PATH=/opt/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    KAFKA_JVM_PERFORMANCE_OPTS="-Xms256m -Xmx512m"
+
 run:
-    "/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties"
+    "/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/kraft/server.properties"
