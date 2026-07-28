@@ -50,6 +50,7 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`cassandra`** | Database / NoSQL | `9042` | NoSQL database on JRE 17 with module-open overrides | Verified ✓ |
 | **`neo4j`** | Database / Graph | `7687` (Bolt) / `7474` (HTTP) | Graph database on JDK 17 with double-fork PID procfs isolation | Verified ✓ |
 | **`rabbitmq`** | Message Broker | `5672` (AMQP) / `15672` (Web) | Broker on Erlang 26 with guest home workspace cookie creation | Verified ✓ |
+| **`kafka`** | Event Streaming | `9092` | KRaft standalone event streamer on JRE 17 | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
@@ -60,7 +61,6 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 
 We are actively validating the top 20 most popular developer containers. The remaining message brokers and monitoring tools undergoing sequence verification are:
 
-16. **`kafka`** *(Event Streaming)*
 17. **`activemq`** *(Message Broker)*
 18. **`clickhouse`** *(Analytics Database)*
 19. **`prometheus`** *(Metrics & Monitoring)*
