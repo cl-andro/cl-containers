@@ -55,6 +55,7 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`clickhouse`** | Database | `8123` (HTTP) / `9000` (Native) | Columnar analytical database | Verified ✓ |
 | **`prometheus`** | Monitoring | `9090` | Time-series system metrics monitor | Verified ✓ |
 | **`grafana`** | Visualization | `3000` | Metric dashboard dashboard aggregator | Verified ✓ |
+| **`caddy`** | Reverse Proxy / Web | `8080` | Ultra-lightweight reverse proxy with auto_https disabled | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
