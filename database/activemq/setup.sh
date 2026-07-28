@@ -26,4 +26,7 @@ fi
 tar -xzf activemq.tar.gz --strip-components=1
 rm -f activemq.tar.gz
 
+# Configure Jetty web admin console to bind to all interfaces (0.0.0.0)
+sed -i 's|<property name="host" value="127.0.0.1"/>|<property name="host" value="0.0.0.0"/>|' /opt/activemq/conf/jetty.xml
+
 echo "=== activemq-broker Sandbox Forged ==="
