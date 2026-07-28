@@ -4,5 +4,12 @@ rootfs: ./rootfs
 hostname: uptime-kuma-node
 share_hardware: false
 
+limit_memory: 512M
+limit_cpu: 0.5
+
+env:
+    PORT=3001
+    PATH=/opt/node/bin:/usr/bin:/bin
+
 run:
     "node server/server.js"
