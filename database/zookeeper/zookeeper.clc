@@ -7,5 +7,9 @@ share_hardware: false
 limit_memory: 512M
 limit_cpu: 1.0
 
+env:
+    JAVA_HOME=/opt/jre
+    PATH=/opt/jre/bin:/usr/bin:/bin
+
 run:
     "/opt/zookeeper/bin/zkServer.sh start-foreground"
