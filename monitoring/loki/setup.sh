@@ -39,11 +39,6 @@ common:
     kvstore:
       store: inmemory
 
-query_range:
-  results_cache:
-    cache:
-      embedded_collector:
-        store: inmemory
 
 schema_config:
   configs:
