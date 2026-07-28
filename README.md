@@ -57,6 +57,7 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`grafana`** | Visualization | `3000` | Metric dashboard dashboard aggregator | Verified ✓ |
 | **`caddy`** | Reverse Proxy / Web | `8080` | Ultra-lightweight reverse proxy with auto_https disabled | Verified ✓ |
 | **`haproxy`** | Reverse Proxy / LB | `9000` | High-performance load balancer compiled natively from source | Verified ✓ |
+| **`traefik`** | Reverse Proxy / Edge | `8000` (Web) / `8082` (Dashboard) | Edge proxy with dynamic configuration and dashboard enabled | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
