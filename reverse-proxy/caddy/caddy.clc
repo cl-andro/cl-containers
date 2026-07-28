@@ -4,5 +4,9 @@ rootfs: ./rootfs
 hostname: caddy-node
 share_hardware: false
 
+env:
+    XDG_DATA_HOME=/var/lib/caddy/data
+    XDG_CONFIG_HOME=/var/lib/caddy/config
+
 run:
     "/opt/caddy/caddy run --config /opt/caddy/Caddyfile"
