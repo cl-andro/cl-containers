@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: consul-node
 share_hardware: false
 
+limit_memory: 256M
+limit_cpu: 0.5
+
 run:
     "/opt/consul/consul agent -dev -client 0.0.0.0"
