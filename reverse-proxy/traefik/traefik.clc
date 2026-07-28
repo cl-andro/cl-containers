@@ -5,4 +5,4 @@ hostname: traefik-node
 share_hardware: false
 
 run:
-    "/opt/traefik/traefik"
+    "/opt/traefik/traefik --configfile=/etc/traefik/traefik.yml"
