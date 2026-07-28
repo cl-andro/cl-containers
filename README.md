@@ -59,6 +59,7 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`haproxy`** | Reverse Proxy / LB | `9000` | High-performance load balancer compiled natively from source | Verified ✓ |
 | **`traefik`** | Reverse Proxy / Edge | `8000` (Web) / `8082` (Dashboard) | Edge proxy with dynamic configuration and dashboard enabled | Verified ✓ |
 | **`zookeeper`** | Distributed Coordination | `2181` | ZooKeeper server running on self-contained JRE 17 | Verified ✓ |
+| **`etcd`** | Distributed Coordination / KV | `2379` | Distributed consistent key-value store database | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
