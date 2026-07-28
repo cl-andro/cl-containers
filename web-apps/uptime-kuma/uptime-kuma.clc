@@ -12,4 +12,4 @@ env:
     PATH=/opt/node/bin:/usr/bin:/bin
 
 run:
-    "node server/server.js"
+    "sh -c 'cd /opt/uptime-kuma && node server/server.js'"
