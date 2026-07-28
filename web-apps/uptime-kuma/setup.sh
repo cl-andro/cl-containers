@@ -25,10 +25,10 @@ fi
 tar -xzf uptime.tar.gz --strip-components=1
 rm -f uptime.tar.gz
 
-# 3. Install production dependencies
+# 3. Run full setup and compile frontend dist
 export PATH=/opt/node/bin:$PATH
-echo "Installing production node modules..."
-npm install --production
+echo "Running Uptime Kuma setup (installing modules & building frontend)..."
+npm run setup
 
 # 4. Create data directory
 mkdir -p data
