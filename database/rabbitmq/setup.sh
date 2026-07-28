@@ -26,6 +26,12 @@ fi
 tar -xJf rabbitmq.tar.xz --strip-components=1
 rm -f rabbitmq.tar.xz
 
+# Create user home directory inside the guest to allow writing .erlang.cookie
+if [ -n "$INVOKING_USER" ] && [ "$INVOKING_USER" != "root" ]; then
+    mkdir -p "/home/$INVOKING_USER"
+    chown "$INVOKING_USER" "/home/$INVOKING_USER"
+fi
+
 # Create RabbitMQ data and log directories
 mkdir -p /var/lib/rabbitmq
 mkdir -p /var/log/rabbitmq
