@@ -32,6 +32,9 @@ tar -xzf /tmp/apr.tar.gz -C /tmp/httpd-build/srclib/apr --strip-components=1
 mkdir -p /tmp/httpd-build/srclib/apr-util
 tar -xzf /tmp/apr-util.tar.gz -C /tmp/httpd-build/srclib/apr-util --strip-components=1
 
+# Add compiled PCRE to PATH so configure script can execute pcre-config
+export PATH=/opt/pcre/bin:$PATH
+
 # 4. Compile Apache HTTPD
 echo "Compiling Apache HTTPD..."
 cd /tmp/httpd-build
