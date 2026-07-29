@@ -5,4 +5,4 @@ hostname: apache-node
 share_hardware: false
 
 run:
-    "/usr/sbin/apache2ctl -DFOREGROUND"
+    "/opt/apache/bin/httpd -DFOREGROUND"
