@@ -70,4 +70,7 @@ if [ -f "$HTTPD_CONF" ]; then
     sed -i 's/Listen 80/Listen 8080/g' "$HTTPD_CONF"
 fi
 
+# Ensure log directory is world-writable so daemon user (mapping to nobody outside) can write to it
+chmod 777 /opt/apache/logs
+
 echo "=== Apache Sandbox Forged ==="
