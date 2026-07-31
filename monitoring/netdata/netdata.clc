@@ -5,4 +5,4 @@ hostname: netdata-node
 share_hardware: false
 
 run:
-    "/opt/netdata/usr/sbin/netdata -D"
+    "/opt/netdata/bin/netdata -D"
