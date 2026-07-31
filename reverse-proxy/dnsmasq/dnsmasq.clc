@@ -5,4 +5,4 @@ hostname: dnsmasq-node
 share_hardware: false
 
 run:
-    "/usr/sbin/dnsmasq --port=1053 --user=root -k -C /dev/null --log-queries --log-facility=-"
+    "/usr/sbin/dnsmasq --port=1053 --user=root -k -C /dev/null --pid-file=/tmp/dnsmasq.pid --log-queries --log-facility=-"
