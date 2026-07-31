@@ -8,7 +8,7 @@ if command -v wget >/dev/null 2>&1; then
 else
     curl -L -o telegraf.tar.gz https://dl.influxdata.com/telegraf/releases/telegraf-1.27.0_linux_amd64.tar.gz
 fi
-tar -xzf telegraf.tar.gz --strip-components=1
+tar -xzf telegraf.tar.gz --strip-components=2
 rm -f telegraf.tar.gz
 
 echo "=== telegraf-agent Sandbox Forged ==="
