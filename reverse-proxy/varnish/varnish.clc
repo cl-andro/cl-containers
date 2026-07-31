@@ -5,4 +5,4 @@ hostname: varnish-node
 share_hardware: false
 
 run:
-    "varnishd -V"
+    "LD_LIBRARY_PATH=/opt/varnish/usr/lib/x86_64-linux-gnu:/opt/varnish/usr/lib /opt/varnish/usr/sbin/varnishd -F -f /opt/varnish/etc/varnish/default.vcl -a :6081 -n /opt/varnish/var/lib/varnish"
