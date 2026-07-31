@@ -13,8 +13,8 @@ cd /tmp/keydb-build
 make -j2
 
 echo "Installing KeyDB..."
-mkdir -p /usr/local/bin
-cp src/keydb-server src/keydb-cli src/keydb-benchmark src/keydb-check-aof src/keydb-check-rdb /usr/local/bin/
+mkdir -p /opt/keydb/bin
+cp src/keydb-server src/keydb-cli src/keydb-benchmark src/keydb-check-aof src/keydb-check-rdb /opt/keydb/bin/
 
 echo "Cleaning up..."
 rm -rf /tmp/keydb-build /tmp/keydb.tar.gz

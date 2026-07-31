@@ -5,4 +5,4 @@ hostname: keydb-node
 share_hardware: false
 
 run:
-    "keydb-server"
+    "/opt/keydb/bin/keydb-server --protected-mode no"
