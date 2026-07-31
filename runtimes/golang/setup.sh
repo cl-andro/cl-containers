@@ -10,5 +10,4 @@ else
 fi
 tar -xzf go.tar.gz --strip-components=1
 rm -f go.tar.gz
-ln -sf /opt/go/bin/go /usr/local/bin/go
 echo "=== Golang Sandbox Forged ==="

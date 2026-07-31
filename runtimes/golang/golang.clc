@@ -5,4 +5,4 @@ hostname: go-node
 share_hardware: false
 
 run:
-    "go version"
+    "/opt/go/bin/go version"
