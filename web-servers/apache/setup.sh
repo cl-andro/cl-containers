@@ -25,7 +25,7 @@ curl -L -o /tmp/expat.tar.gz https://github.com/libexpat/libexpat/releases/downl
 tar -xzf /tmp/expat.tar.gz -C /tmp/expat-build --strip-components=1
 echo "Compiling Expat..."
 cd /tmp/expat-build
-./configure --prefix=/opt/expat --disable-shared --enable-static
+./configure --prefix=/opt/expat --disable-shared --enable-static CFLAGS="-fPIC" CXXFLAGS="-fPIC"
 make -j2
 make install
 
