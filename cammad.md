@@ -50,3 +50,13 @@ Ctrl + C
 | **`nodejs`** | `runtimes` | - | Node.js Runtime Environment |
 | **`python`** | `runtimes` | - | Python Runtime Environment |
 | **`golang`** | `runtimes` | - | Go Compiler Environment |
+| **`apache`** | `web-servers` | `8080` | Apache HTTP Server |
+| **`meilisearch`** | `database` | `7700` | Meilisearch Search Engine |
+| **`keydb`** | `database` | `6379` | KeyDB Cache Store |
+| **`couchdb`** | `database` | `5984` | CouchDB NoSQL Document Store |
+| **`netdata`** | `monitoring` | `19999` | Netdata System Metrics Dashboard |
+| **`telegraf`** | `monitoring` | - | Telegraf Metrics Gathering Agent |
+| **`varnish`** | `reverse-proxy` | `6081` | Varnish Cache Proxy |
+| **`squid`** | `reverse-proxy` | `3128` | Squid Caching Proxy Server |
+| **`wordpress`** | `web-apps` | `8080` | WordPress CMS Application |
+| **`nodered`** | `web-apps` | `1880` | Node-RED Flow Orchestrator |

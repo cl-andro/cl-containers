@@ -65,12 +65,22 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`loki`** | Monitoring / Logs | `3100` | Log aggregation engine from Grafana | Verified ✓ |
 | **`jenkins`** | CI/CD | `8085` | Automation build server running on self-contained JRE 17 | Verified ✓ |
 | **`uptime-kuma`** | Monitoring / Status | `3001` | Self-hosted monitoring dashboard on self-contained Node.js 18 | Verified ✓ |
+| **`apache`** | Web Servers / HTTP | `8080` | Apache HTTP Server with custom non-privileged port configuration | Verified ✓ |
+| **`meilisearch`** | Database / Search | `7700` | Lightning-fast search engine running on self-contained binary | Verified ✓ |
+| **`keydb`** | Database / Cache | `6379` | Multithreaded Redis fork with custom client credentials | Verified ✓ |
+| **`couchdb`** | Database / NoSQL | `5984` | CouchDB document database with custom workspace logging and databases | Verified ✓ |
+| **`netdata`** | Monitoring | `19999` | Real-time system monitoring dashboard on static standalone build | Verified ✓ |
+| **`telegraf`** | Monitoring | - | Telegraf system metrics collector with basic active plugin configuration | Verified ✓ |
+| **`varnish`** | Reverse Proxy / Cache | `6081` | Varnish Cache proxy utilizing self-contained Debian jemalloc | Verified ✓ |
+| **`squid`** | Reverse Proxy / Proxy | `3128` | Squid caching proxy utilizing LD_PRELOAD mock for rootless execution | Verified ✓ |
+| **`wordpress`** | Web Apps / CMS | `8080` | WordPress CMS utilizing self-contained PHP 8.4 runtime and MySQL drivers | Verified ✓ |
+| **`nodered`** | Web Apps / Flow | `1880` | Node-RED flow builder running on self-contained Node.js v22.11.0 | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
 
 ---
 
-## 🚀 Priority Releases Queue (Top 30)
+## 🚀 Priority Releases Queue (Top 40 Complete)
 
-We have successfully verified and released the top 30 most popular developer container environments! We will continue expansion to further milestones.
+We have successfully verified and released the top 40 most popular developer container environments! We will continue expansion to further milestones.
