@@ -15,7 +15,13 @@ dpkg-deb -x /tmp/squid.deb /opt/squid/
 dpkg-deb -x /tmp/squid-common.deb /opt/squid/
 dpkg-deb -x /tmp/libecap.deb /opt/squid/
 
+echo "Fixing broken symlinks..."
+rm -f /opt/squid/usr/share/squid/errors
+mkdir -p /opt/squid/usr/share/squid/errors
+
 echo "Configuring squid.conf..."
+sed -i 's|^include /etc/squid/conf.d/.*|#include /etc/squid/conf.d/*.conf|g' /opt/squid/etc/squid/squid.conf
+
 if [ -n "$INVOKING_USER" ]; then
     echo "cache_effective_user $INVOKING_USER" >> /opt/squid/etc/squid/squid.conf
 fi
