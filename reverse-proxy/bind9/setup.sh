@@ -11,7 +11,7 @@ curl -L -o /tmp/bind9-libs.deb http://security.debian.org/debian-security/pool/u
 curl -L -o /tmp/libjemalloc2.deb http://deb.debian.org/debian/pool/main/j/jemalloc/libjemalloc2_5.3.0-3_amd64.deb
 curl -L -o /tmp/libmaxminddb0.deb http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb0_1.12.2-1_amd64.deb
 curl -L -o /tmp/libfstrm0.deb http://deb.debian.org/debian/pool/main/f/fstrm/libfstrm0_0.6.1-1+b3_amd64.deb
-curl -L -o /tmp/libuv1t64.deb http://deb.debian.org/debian/pool/main/libu/libuv/libuv1t64_1.50.0-2_amd64.deb
+curl -L -o /tmp/libuv1t64.deb http://deb.debian.org/debian/pool/main/libu/libuv1/libuv1t64_1.50.0-2_amd64.deb
 curl -L -o /tmp/libprotobuf-c1.deb http://deb.debian.org/debian/pool/main/p/protobuf-c/libprotobuf-c1_1.5.1-1_amd64.deb
 
 echo "Extracting packages..."
