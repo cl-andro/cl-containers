@@ -5,4 +5,4 @@ hostname: bind9-node
 share_hardware: false
 
 run:
-    "/usr/sbin/named -g"
+    "LD_LIBRARY_PATH=/opt/bind9/usr/lib/x86_64-linux-gnu /opt/bind9/usr/sbin/named -g -c /etc/bind/named.conf"
