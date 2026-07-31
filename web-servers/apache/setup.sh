@@ -18,6 +18,17 @@ cd /tmp/pcre-build
 make -j2
 make install
 
+# Compile Expat dependency
+echo "Downloading Expat..."
+mkdir -p /tmp/expat-build
+curl -L -o /tmp/expat.tar.gz https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.gz
+tar -xzf /tmp/expat.tar.gz -C /tmp/expat-build --strip-components=1
+echo "Compiling Expat..."
+cd /tmp/expat-build
+./configure --prefix=/opt/expat --disable-shared --enable-static
+make -j2
+make install
+
 # 3. Download and extract HTTPD, APR, and APR-Util
 echo "Downloading Apache HTTPD, APR, and APR-Util..."
 curl -L -o /tmp/httpd.tar.gz https://archive.apache.org/dist/httpd/httpd-2.4.58.tar.gz
@@ -41,6 +52,7 @@ cd /tmp/httpd-build
 ./configure --prefix=/opt/apache \
             --with-included-apr \
             --with-pcre=/opt/pcre \
+            --with-expat=/opt/expat \
             --enable-mods-shared=all \
             --enable-mpms-shared=all
 make -j2
@@ -48,7 +60,7 @@ make install
 
 # 5. Clean up build files
 echo "Cleaning up build files..."
-rm -rf /tmp/pcre-build /tmp/httpd-build /tmp/pcre.tar.gz /tmp/httpd.tar.gz /tmp/apr.tar.gz /tmp/apr-util.tar.gz
+rm -rf /tmp/pcre-build /tmp/expat-build /tmp/httpd-build /tmp/pcre.tar.gz /tmp/expat.tar.gz /tmp/httpd.tar.gz /tmp/apr.tar.gz /tmp/apr-util.tar.gz
 
 # 6. Configure Apache HTTPD to run on port 8080 as unprivileged user
 echo "Configuring Apache HTTPD..."
