@@ -5,4 +5,4 @@ hostname: dnsmasq-node
 share_hardware: false
 
 run:
-    "/usr/sbin/dnsmasq --port=1053 --user=root --group=root -k -C /dev/null --pid-file=/tmp/dnsmasq.pid --log-queries --log-facility=-"
+    "LD_PRELOAD=/opt/dnsmasq/libmock.so /usr/sbin/dnsmasq --port=1053 --user=nobody -k -C /dev/null --pid-file=/tmp/dnsmasq.pid --log-queries --log-facility=-"
