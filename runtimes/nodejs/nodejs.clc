@@ -5,4 +5,4 @@ hostname: node-node
 share_hardware: false
 
 run:
-    "node -v"
+    "/opt/node/bin/node -v"

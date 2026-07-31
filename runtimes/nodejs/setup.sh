@@ -10,6 +10,4 @@ else
 fi
 tar -xf node.tar.xz --strip-components=1
 rm -f node.tar.xz
-ln -sf /opt/node/bin/node /usr/local/bin/node
-ln -sf /opt/node/bin/npm /usr/local/bin/npm
 echo "=== Node.js Sandbox Forged ==="
