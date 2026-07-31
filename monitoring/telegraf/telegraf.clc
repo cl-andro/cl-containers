@@ -5,4 +5,4 @@ hostname: telegraf-node
 share_hardware: false
 
 run:
-    "/opt/telegraf/usr/bin/telegraf"
+    "/opt/telegraf/usr/bin/telegraf --config /opt/telegraf/etc/telegraf/telegraf.conf"
