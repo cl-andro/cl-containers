@@ -10,4 +10,7 @@ else
 fi
 chmod +x meilisearch
 
+# Ensure directory is world-writable so Meilisearch can write database files without permission conflicts
+chmod 777 /opt/meilisearch
+
 echo "=== meilisearch Sandbox Forged ==="
