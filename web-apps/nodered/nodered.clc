@@ -5,4 +5,4 @@ hostname: nodered-node
 share_hardware: false
 
 run:
-    "node-red"
+    "/opt/node/bin/node /opt/node-red/lib/node_modules/node-red/red.js --userDir /var/lib/node-red"
