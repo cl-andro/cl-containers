@@ -5,4 +5,4 @@ hostname: meilisearch-node
 share_hardware: false
 
 run:
-    "python3 -c \"import os; os.makedirs('/opt/meilisearch/data.ms', exist_ok=True); open('/opt/meilisearch/data.ms/test', 'w').write('test'); print('WRITE_OK')\""
+    "touch /opt/meilisearch/data_test.txt"
