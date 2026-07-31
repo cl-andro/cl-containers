@@ -22,6 +22,9 @@ bind_address = 0.0.0.0
 
 [admins]
 admin = password
+
+[log]
+writer = stderr
 EOF
 
 echo "Setting permissions..."
