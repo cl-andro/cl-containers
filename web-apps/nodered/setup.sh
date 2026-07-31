@@ -6,7 +6,7 @@ mkdir -p /opt/node-red
 mkdir -p /var/lib/node-red
 
 echo "Downloading and extracting Node.js..."
-curl -L https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-x64.tar.xz | tar -xJ --strip-components=1 -C /opt/node
+curl -L https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz | tar -xJ --strip-components=1 -C /opt/node
 
 echo "Installing Node-RED via npm..."
 export PATH="/opt/node/bin:$PATH"
