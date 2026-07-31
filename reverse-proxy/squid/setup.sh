@@ -33,6 +33,7 @@ cache_log /opt/squid/var/log/cache.log
 mime_table /opt/squid/usr/share/squid/mime.conf
 unlinkd_program /opt/squid/usr/lib/squid/unlinkd
 logfile_daemon /opt/squid/usr/lib/squid/log_file_daemon
+icon_directory /opt/squid/usr/share/squid/icons
 EOF
 
 echo "Setting permissions..."
