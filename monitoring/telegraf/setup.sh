@@ -11,4 +11,19 @@ fi
 tar -xzf telegraf.tar.gz --strip-components=2
 rm -f telegraf.tar.gz
 
+echo "Configuring telegraf.conf with stdout file output..."
+cat << 'EOF' >> /opt/telegraf/etc/telegraf/telegraf.conf
+
+[[outputs.file]]
+  files = ["stdout"]
+
+[[inputs.cpu]]
+  percpu = true
+  totalcpu = true
+  collect_cpu_time = false
+  report_active = false
+
+[[inputs.mem]]
+EOF
+
 echo "=== telegraf-agent Sandbox Forged ==="
