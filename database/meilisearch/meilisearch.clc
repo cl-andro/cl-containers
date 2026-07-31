@@ -5,4 +5,4 @@ hostname: meilisearch-node
 share_hardware: false
 
 run:
-    "env"
+    "id"
