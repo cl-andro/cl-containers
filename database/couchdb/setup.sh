@@ -1,5 +1,6 @@
 #!/bin/sh
-set -e
+exec > /install.log 2>&1
+set -ex
 echo "=== couch-db Sandbox Setup ==="
 mkdir -p /opt/couchdb
 mkdir -p /tmp/couchdb-build
