@@ -8,4 +8,4 @@ mount_external:
     "/dev/shm -> /dev/shm"
 
 run:
-    "LD_LIBRARY_PATH=/opt/squid/usr/lib/x86_64-linux-gnu /opt/squid/usr/sbin/squid -N -d 1 -f /opt/squid/etc/squid/squid.conf"
+    "LD_PRELOAD=/opt/squid/libmock.so LD_LIBRARY_PATH=/opt/squid/usr/lib/x86_64-linux-gnu /opt/squid/usr/sbin/squid -N -d 1 -f /opt/squid/etc/squid/squid.conf"

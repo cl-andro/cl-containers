@@ -33,7 +33,29 @@ unlinkd_program /opt/squid/usr/lib/squid/unlinkd
 logfile_daemon /opt/squid/usr/lib/squid/log_file_daemon
 icon_directory /opt/squid/usr/share/squid/icons
 cache_effective_group root
+coredump_dir /opt/squid/var
 EOF
+
+echo "Compiling UID mocking library..."
+cat << 'EOF' > /tmp/mock_setuid.c
+#include <unistd.h>
+#include <sys/types.h>
+
+int setuid(uid_t uid) { return 0; }
+int setgid(gid_t gid) { return 0; }
+int setreuid(uid_t ruid, uid_t euid) { return 0; }
+int setregid(gid_t rgid, gid_t egid) { return 0; }
+int setresuid(uid_t ruid, uid_t euid, uid_t suid) { return 0; }
+int setresgid(gid_t rgid, gid_t egid, gid_t sgid) { return 0; }
+int initgroups(const char *user, gid_t group) { return 0; }
+int setgroups(size_t size, const gid_t *list) { return 0; }
+uid_t geteuid(void) { return 1000; }
+uid_t getuid(void) { return 1000; }
+gid_t getegid(void) { return 1000; }
+gid_t getgid(void) { return 1000; }
+EOF
+gcc -shared -fPIC -o /opt/squid/libmock.so /tmp/mock_setuid.c
+rm -f /tmp/mock_setuid.c
 
 echo "Setting permissions..."
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
