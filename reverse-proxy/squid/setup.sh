@@ -31,6 +31,8 @@ pid_filename /opt/squid/var/run/squid.pid
 access_log stdio:/opt/squid/var/log/access.log
 cache_log /opt/squid/var/log/cache.log
 mime_table /opt/squid/usr/share/squid/mime.conf
+unlinkd_program /opt/squid/usr/lib/squid/unlinkd
+logfile_daemon /opt/squid/usr/lib/squid/log_file_daemon
 EOF
 
 echo "Setting permissions..."
