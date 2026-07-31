@@ -15,6 +15,10 @@ dpkg-deb -x /tmp/couchdb.deb /tmp/couchdb-extract
 echo "Installing CouchDB..."
 cp -r /tmp/couchdb-extract/opt/couchdb/* /opt/couchdb/
 
+echo "Fixing symlinks..."
+rm -f /opt/couchdb/data
+mkdir -p /opt/couchdb/data
+
 echo "Configuring CouchDB..."
 mkdir -p /opt/couchdb/etc/local.d
 cat <<EOF > /opt/couchdb/etc/local.d/10-custom.ini
