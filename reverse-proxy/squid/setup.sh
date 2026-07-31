@@ -22,9 +22,7 @@ mkdir -p /opt/squid/usr/share/squid/errors
 echo "Configuring squid.conf..."
 sed -i 's|^include /etc/squid/conf.d/.*|#include /etc/squid/conf.d/*.conf|g' /opt/squid/etc/squid/squid.conf
 
-if [ -n "$INVOKING_USER" ]; then
-    echo "cache_effective_user $INVOKING_USER" >> /opt/squid/etc/squid/squid.conf
-fi
+echo "cache_effective_user root" >> /opt/squid/etc/squid/squid.conf
 
 cat <<EOF >> /opt/squid/etc/squid/squid.conf
 pid_filename /opt/squid/var/run/squid.pid
