@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: elixir-node
 share_hardware: false
 
+env:
+    PATH=/opt/elixir/usr/bin:/usr/bin:/bin
+
 run:
-    "elixir -v"
+    "/opt/elixir/usr/bin/elixir -v"
