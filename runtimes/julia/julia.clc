@@ -5,4 +5,4 @@ hostname: julia-node
 share_hardware: false
 
 run:
-    "julia --version"
+    "/opt/julia/bin/julia --version"
