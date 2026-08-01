@@ -5,4 +5,4 @@ hostname: aws-cli-node
 share_hardware: false
 
 run:
-    "aws --version"
+    "/opt/aws-cli/bin/aws --version"
