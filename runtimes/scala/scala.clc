@@ -6,6 +6,7 @@ share_hardware: false
 
 env:
     PATH=/opt/scala/bin:/opt/scala/jre/bin:/usr/bin:/bin
+    JAVA_HOME=/opt/scala/jre
 
 run:
     "/opt/scala/bin/scala -version"
