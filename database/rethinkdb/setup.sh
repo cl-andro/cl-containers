@@ -9,7 +9,7 @@ mkdir -p /var/lib/rethinkdb
 
 # Download rethinkdb deb package
 echo "Downloading RethinkDB deb package..."
-curl -L -o /tmp/rethinkdb.deb https://download.rethinkdb.com/repository/debian-bookworm/pool/r/rethinkdb/rethinkdb_2.4.4~0bookworm_amd64.deb
+curl -L --retry 5 --retry-delay 3 -o /tmp/rethinkdb.deb https://download.rethinkdb.com/repository/debian-bookworm/pool/r/rethinkdb/rethinkdb_2.4.4~0bookworm_amd64.deb
 
 echo "Extracting package rootlessly to /opt/rethinkdb..."
 dpkg -x /tmp/rethinkdb.deb /opt/rethinkdb
