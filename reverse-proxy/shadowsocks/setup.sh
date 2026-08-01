@@ -14,6 +14,7 @@ curl -L -o libcork.deb https://deb.debian.org/debian/pool/main/libc/libcork/libc
 curl -L -o libcorkipset.deb https://deb.debian.org/debian/pool/main/libc/libcorkipset/libcorkipset1_1.1.1%2Bgit20171111.6842a63-2%2Bb2_amd64.deb
 curl -L -o libjsonparser.deb https://deb.debian.org/debian/pool/main/libj/libjsonparser/libjsonparser1.1_1.1.0-2%2Bb2_amd64.deb
 curl -L -o libev.deb https://deb.debian.org/debian/pool/main/libe/libev/libev4t64_4.33-2.1%2Bb1_amd64.deb
+curl -L -o libcares.deb https://deb.debian.org/debian/pool/main/c/c-ares/libcares2_1.34.5-1%2Bdeb13u1_amd64.deb
 
 echo "Extracting packages..."
 for deb in *.deb; do
