@@ -3,6 +3,7 @@ set -e
 echo "=== gatsby-builder Sandbox Setup ==="
 
 # 1. Download and extract NodeJS standalone
+rm -rf /opt/node
 mkdir -p /opt/node
 mkdir -p /tmp/node_extract
 cd /tmp/node_extract

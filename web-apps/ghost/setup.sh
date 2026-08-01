@@ -3,6 +3,7 @@ set -e
 echo "=== ghost-blog Sandbox Setup ==="
 
 # 1. Download and extract NodeJS standalone v22.23.2
+rm -rf /opt/node
 mkdir -p /opt/node
 mkdir -p /tmp/node_extract
 cd /tmp/node_extract
