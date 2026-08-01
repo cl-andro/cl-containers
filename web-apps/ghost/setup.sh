@@ -33,6 +33,7 @@ echo "Installing pnpm..."
 PATH=/opt/node/bin:$PATH /opt/node/bin/npm install -g pnpm
 
 # 3. Install Ghost locally using ghost-cli
+rm -rf /opt/ghost
 mkdir -p /opt/ghost
 cd /opt/ghost
 echo "Creating mock setuptools module..."
