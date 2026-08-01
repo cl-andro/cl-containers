@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: kotlin-node
 share_hardware: false
 
+env:
+    PATH=/opt/kotlin/bin:/opt/kotlin/jre/bin:/usr/bin:/bin
+
 run:
-    "kotlinc -version"
+    "/opt/kotlin/bin/kotlinc -version"
