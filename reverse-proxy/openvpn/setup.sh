@@ -30,6 +30,7 @@ dev tun
 proto udp
 port 1194
 secret /etc/openvpn/static.key
+cipher AES-256-CBC
 verb 3
 EOF
 
