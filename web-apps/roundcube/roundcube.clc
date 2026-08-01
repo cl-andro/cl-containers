@@ -5,4 +5,4 @@ hostname: roundcube-node
 share_hardware: false
 
 run:
-    "php -S 0.0.0.0:8080"
+    "cd /opt/roundcube && /opt/php/bin/php -S 0.0.0.0:8080"
