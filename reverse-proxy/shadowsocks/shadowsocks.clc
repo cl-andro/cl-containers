@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: shadowsocks-node
 share_hardware: false
 
+env:
+    LD_LIBRARY_PATH=/opt/shadowsocks/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
+
 run:
-    "ssserver -c /etc/shadowsocks.json"
+    "/opt/shadowsocks/usr/bin/ssserver -c /etc/shadowsocks.json"
