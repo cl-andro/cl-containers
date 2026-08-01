@@ -5,4 +5,4 @@ hostname: trilium-node
 share_hardware: false
 
 run:
-    "env TRILIUM_PORT=8080 TRILIUM_HOST=0.0.0.0 TRILIUM_DATA_DIR=/opt/trilium/data cd /opt/trilium && ./trilium.sh"
+    "cd /opt/trilium && env TRILIUM_PORT=8080 TRILIUM_HOST=0.0.0.0 TRILIUM_DATA_DIR=/opt/trilium/data ./trilium.sh"
