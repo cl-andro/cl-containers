@@ -12,6 +12,9 @@ dpkg-deb -x /tmp/php-cli.deb /opt/php/
 dpkg-deb -x /tmp/php-common.deb /opt/php/
 rm -f /tmp/php-cli.deb /tmp/php-common.deb
 
+echo "Creating symlink for general php binary..."
+ln -sf php8.4 /opt/php/usr/bin/php
+
 echo "Setting permissions..."
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
     chown -R "$SUDO_UID:$SUDO_GID" /opt/php
