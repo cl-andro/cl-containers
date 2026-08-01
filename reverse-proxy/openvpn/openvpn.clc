@@ -6,6 +6,7 @@ share_hardware: true
 
 env:
     LD_LIBRARY_PATH=/opt/openvpn/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
+    CLC_DROP_PRIVILEGES=false
 
 run:
     "/opt/openvpn/usr/sbin/openvpn --config /etc/openvpn/server.conf"
