@@ -2,7 +2,7 @@
 name: openvpn-vpn
 rootfs: ./rootfs
 hostname: openvpn-node
-share_hardware: false
+share_hardware: true
 
 run:
-    "openvpn --config /etc/openvpn/server.conf"
+    "/opt/openvpn/usr/sbin/openvpn --config /etc/openvpn/server.conf"
