@@ -4,5 +4,9 @@ rootfs: ./rootfs
 hostname: ghost-node
 share_hardware: false
 
+env:
+    PATH=/opt/node/bin:/usr/bin:/bin
+    NODE_ENV=development
+
 run:
-    "node current/index.js"
+    "node /opt/ghost/current/index.js"
