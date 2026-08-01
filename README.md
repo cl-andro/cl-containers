@@ -95,12 +95,22 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`elixir`** | Runtimes / Elixir | - | Elixir 1.18.3 & Erlang OTP 27 compiler and interpreter runtime | Verified ✓ |
 | **`kotlin`** | Runtimes / Kotlin | - | JetBrains Kotlin 2.0.21 JVM compiler (kotlinc) toolchain | Verified ✓ |
 | **`scala`** | Runtimes / Scala | - | Scala 3.5.2 compiler (scalac) and runtime runner environment | Verified ✓ |
+| **`drupal`** | Web Apps / CMS | `8080` | Drupal CMS running on PHP 8.4 runtime and SQLite database | Verified ✓ |
+| **`joomla`** | Web Apps / CMS | `8080` | Joomla CMS running on PHP 8.4 runtime and SQLite database | Verified ✓ |
+| **`nextcloud`** | Web Apps / Cloud | `8080` | Nextcloud collaboration suite running on rootless PHP 8.4 and SQLite | Verified ✓ |
+| **`openvpn`** | VPN / Proxy | `1194` | OpenVPN secure tunneling server in static-key cipher mode | Verified ✓ |
+| **`wireguard`** | VPN / Proxy | - | WireGuard userland administration utility (`wg`) | Verified ✓ |
+| **`shadowsocks`** | VPN / Proxy | `8388` | Shadowsocks SOCKS5 secure proxy server with custom config | Verified ✓ |
+| **`privoxy`** | VPN / Proxy | `8118` (or `--version`) | Privoxy ad-blocking web proxy running rootlessly | Verified ✓ |
+| **`hugo`** | Static Site Generator | - | Hugo Extended static site compiler and server | Verified ✓ |
+| **`gatsby`** | Static Site Generator | - | Gatsby CLI site generator running on self-contained Node.js v22 | Verified ✓ |
+| **`ghost`** | Web Apps / CMS | `2368` | Ghost CMS blogging platform running on self-contained Node.js v22 and pnpm | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
 
 ---
 
-## 🚀 Priority Releases Queue (Top 60 Complete)
+## 🚀 Priority Releases Queue (Top 70 Complete)
 
-We have successfully verified and released the top 60 most popular developer container environments! We will continue expansion to further milestones.
+We have successfully verified and released the top 70 most popular developer container environments! We will continue expansion to further milestones.
