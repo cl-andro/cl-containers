@@ -22,7 +22,23 @@ echo "Unpacking setuptools build dependency..."
 python3 -m zipfile -e /tmp/setuptools.zip /opt/python-deps
 rm -f /tmp/setuptools.zip
 
-# 3. Install n8n globally using local Node toolchain with PYTHONPATH override
+# 3. Create python wrapper shims inside /opt/node/bin to inject PYTHONPATH
+echo "Creating python wrappers..."
+cat << 'EOF' > /opt/node/bin/python3
+#!/bin/sh
+export PYTHONPATH="/opt/python-deps"
+exec /usr/bin/python3 "$@"
+EOF
+chmod +x /opt/node/bin/python3
+
+cat << 'EOF' > /opt/node/bin/python
+#!/bin/sh
+export PYTHONPATH="/opt/python-deps"
+exec /usr/bin/python3 "$@"
+EOF
+chmod +x /opt/node/bin/python
+
+# 4. Install n8n globally using local Node toolchain with PYTHONPATH override
 echo "Installing n8n globally..."
 PYTHONPATH="/opt/python-deps" PATH="/opt/node/bin:$PATH" /opt/node/bin/npm install -g n8n
 
