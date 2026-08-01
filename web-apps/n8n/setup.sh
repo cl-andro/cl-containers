@@ -42,13 +42,9 @@ exec /usr/bin/python3 "$@"
 EOF
 chmod +x /opt/node/bin/python
 
-# 5. Configure npm to use our Python wrapper
-echo "Configuring npm python path..."
-PATH="/opt/node/bin:$PATH" /opt/node/bin/npm config set python /opt/node/bin/python3
-
-# 6. Install n8n globally
+# 5. Install n8n globally using local Node toolchain with PYTHONPATH, PYTHON wrapper, and npm_config_python overrides
 echo "Installing n8n globally..."
-PYTHON="/opt/node/bin/python3" PYTHONPATH="/opt/python-deps" PATH="/opt/node/bin:$PATH" /opt/node/bin/npm install -g n8n
+npm_config_python="/opt/node/bin/python3" PYTHON="/opt/node/bin/python3" PYTHONPATH="/opt/python-deps" PATH="/opt/node/bin:$PATH" /opt/node/bin/npm install -g n8n
 
 # Setup proper permissions
 echo "Setting permissions..."
