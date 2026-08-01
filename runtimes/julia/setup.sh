@@ -4,11 +4,11 @@ echo "=== julia-runtime Sandbox Setup ==="
 mkdir -p /opt/julia
 cd /opt/julia
 
-echo "Downloading Julia 1.10.4..."
+echo "Downloading Julia 1.11.2..."
 if command -v wget >/dev/null 2>&1; then
-    wget -O julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.4-linux-x86_64.tar.gz
+    wget -O julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/1.11/julia-1.11.2-linux-x86_64.tar.gz
 else
-    curl -L -o julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.4-linux-x86_64.tar.gz
+    curl -L -o julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/1.11/julia-1.11.2-linux-x86_64.tar.gz
 fi
 
 echo "Extracting package..."
