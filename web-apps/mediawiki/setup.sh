@@ -21,7 +21,7 @@ rm -f /tmp/mediawiki.tar.gz
 
 # 3. Download Composer
 echo "Downloading Composer..."
-curl -L -o /tmp/composer.phar https://getcomposer.org/composer.phar
+curl -L -o /tmp/composer.phar https://getcomposer.org/composer-2.phar
 
 # 4. Install MediaWiki dependencies via Composer using FrankenPHP SAPI CLI
 echo "Installing MediaWiki composer dependencies..."
