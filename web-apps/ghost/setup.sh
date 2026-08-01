@@ -32,8 +32,12 @@ PATH=/opt/node/bin:$PATH /opt/node/bin/npm install --unsafe-perm ghost-cli@1.29.
 # 3. Install Ghost locally using ghost-cli
 mkdir -p /opt/ghost
 cd /opt/ghost
+echo "Creating mock setuptools module..."
+mkdir -p /tmp/mock_python/setuptools
+touch /tmp/mock_python/setuptools/__init__.py
 echo "Installing Ghost via ghost-cli..."
-GHOST_NODE_VERSION_CHECK=false PATH=/opt/node/bin:$PATH /opt/ghost-cli/node_modules/.bin/ghost install local --allow-root --no-start --dir /opt/ghost
+PYTHONPATH=/tmp/mock_python GHOST_NODE_VERSION_CHECK=false PATH=/opt/node/bin:$PATH /opt/ghost-cli/node_modules/.bin/ghost install local --allow-root --no-start --dir /opt/ghost
+rm -rf /tmp/mock_python
 
 echo "Setting permissions..."
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
