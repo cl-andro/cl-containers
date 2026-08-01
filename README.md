@@ -85,12 +85,22 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`fluentd`** | Monitoring / Agent | `9880` | Fluentd log agent collecting HTTP traffic and writing to stdout | Verified ✓ |
 | **`arangodb`** | Database / Graph | `8529` | ArangoDB multi-model NoSQL document and graph database | Verified ✓ |
 | **`cockroachdb`** | Database / SQL | `26257` | CockroachDB cloud-native distributed SQL database in single-node mode | Verified ✓ |
+| **`java`** | Runtimes / Java | - | Eclipse Temurin OpenJDK 17 JDK & JRE development environment | Verified ✓ |
+| **`php`** | Runtimes / PHP | - | PHP 8.4 command-line interpreter runtime environment | Verified ✓ |
+| **`ruby`** | Runtimes / Ruby | - | Ruby 3.3.8 command-line interpreter runtime environment | Verified ✓ |
+| **`gcc-cpp`** | Runtimes / C++ | - | GNU C++ Compiler (g++) development environment | Verified ✓ |
+| **`dotnet`** | Runtimes / .NET | - | Microsoft .NET 8.0 SDK compiler and runtime CLI | Verified ✓ |
+| **`swift`** | Runtimes / Swift | - | Apple Swift 6.0.2 compiler and runtime CLI toolchain | Verified ✓ |
+| **`perl`** | Runtimes / Perl | - | Perl 5.40.1 scripting language interpreter runtime environment | Verified ✓ |
+| **`elixir`** | Runtimes / Elixir | - | Elixir 1.18.3 & Erlang OTP 27 compiler and interpreter runtime | Verified ✓ |
+| **`kotlin`** | Runtimes / Kotlin | - | JetBrains Kotlin 2.0.21 JVM compiler (kotlinc) toolchain | Verified ✓ |
+| **`scala`** | Runtimes / Scala | - | Scala 3.5.2 compiler (scalac) and runtime runner environment | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
 
 ---
 
-## 🚀 Priority Releases Queue (Top 50 Complete)
+## 🚀 Priority Releases Queue (Top 60 Complete)
 
-We have successfully verified and released the top 50 most popular developer container environments! We will continue expansion to further milestones.
+We have successfully verified and released the top 60 most popular developer container environments! We will continue expansion to further milestones.

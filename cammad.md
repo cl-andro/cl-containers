@@ -89,3 +89,13 @@ Ctrl + C
 | **`fluentd`** | `monitoring` | `9880` | Fluentd Log Forwarder |
 | **`arangodb`** | `database` | `8529` | ArangoDB Multi-model NoSQL DB |
 | **`cockroachdb`** | `database` | `26257` | CockroachDB Distributed SQL DB |
+| **`java`** | `runtimes` | - | Java JDK 17 Runtime Environment |
+| **`php`** | `runtimes` | - | PHP 8.4 CLI Runtime |
+| **`ruby`** | `runtimes` | - | Ruby 3.3.8 Runtime |
+| **`gcc-cpp`** | `runtimes` | - | GNU C++ Compiler (g++) |
+| **`dotnet`** | `runtimes` | - | Microsoft .NET 8.0 SDK |
+| **`swift`** | `runtimes` | - | Swift 6.0.2 Compiler Toolchain |
+| **`perl`** | `runtimes` | - | Perl 5.40.1 scripting language |
+| **`elixir`** | `runtimes` | - | Elixir 1.18.3 & Erlang OTP 27 |
+| **`kotlin`** | `runtimes` | - | Kotlin 2.0.21 JVM Compiler |
+| **`scala`** | `runtimes` | - | Scala 3.5.2 Compiler & Runner |
