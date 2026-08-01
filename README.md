@@ -115,12 +115,22 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`ansible`** | CI/CD / Automation | - | Ansible IT automation engine running in rootless python venv | Verified ✓ |
 | **`gitlab-runner`** | CI/CD / Runners | - | GitLab Runner service for executing GitLab CI/CD jobs | Verified ✓ |
 | **`gitea-runner`** | CI/CD / Runners | - | Gitea Actions CI/CD runner execution binary (act_runner) | Verified ✓ |
+| **`gitea-act`** | CI/CD / Runners | - | Act runner for Gitea Actions local runner execution | Verified ✓ |
+| **`typesense`** | Database / Search | `8108` | Singly-searchable typosensitive search engine | Verified ✓ |
+| **`scylladb`** | Database / NoSQL | `9042` | ScyllaDB NoSQL engine compatible with Apache Cassandra | Verified ✓ |
+| **`mqtt`** | Message Broker | `1883` | Mosquitto MQTT message broker SAPI | Verified ✓ |
+| **`rethinkdb`** | Database / NoSQL | `28015` | RethinkDB real-time JSON document database | Verified ✓ |
+| **`roundcube`** | Web Apps / Collaboration | `8080` | Roundcube webmail client running on static FrankenPHP SAPI | Verified ✓ |
+| **`freshrss`** | Web Apps / Reader | `8080` | FreshRSS self-hosted feed aggregator running on FrankenPHP | Verified ✓ |
+| **`wekan`** | Web Apps / Collaboration | `8080` | Wekan Trello-like Kanban board running on Node.js and MongoDB | Verified ✓ |
+| **`trilium`** | Web Apps / Notes | `8080` | Trilium Notes hierarchical note-taking app running on Node.js | Verified ✓ |
+| **`mediawiki`** | Web Apps / Wiki | `8080` | MediaWiki wiki engine running on static FrankenPHP SAPI | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
 
 ---
 
-## 🚀 Priority Releases Queue (Top 80 Complete)
+## 🚀 Priority Releases Queue (Top 90 Complete)
 
-We have successfully verified and released the top 80 most popular developer container environments! We will continue expansion to further milestones.
+We have successfully verified and released the top 90 most popular developer container environments! We will continue expansion to further milestones.
