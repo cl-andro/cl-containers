@@ -27,7 +27,7 @@ mkdir -p /opt/gatsby
 cd /opt/gatsby
 
 echo "Installing gatsby-cli locally..."
-/opt/node/bin/npm install --unsafe-perm gatsby-cli
+PATH=/opt/node/bin:$PATH /opt/node/bin/npm install --unsafe-perm gatsby-cli
 
 echo "Setting permissions..."
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
