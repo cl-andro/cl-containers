@@ -29,6 +29,9 @@ cd /opt/ghost-cli
 echo "Installing ghost-cli..."
 PATH=/opt/node/bin:$PATH /opt/node/bin/npm install --unsafe-perm ghost-cli@1.29.1
 
+echo "Installing pnpm..."
+PATH=/opt/node/bin:$PATH /opt/node/bin/npm install -g pnpm
+
 # 3. Install Ghost locally using ghost-cli
 mkdir -p /opt/ghost
 cd /opt/ghost
