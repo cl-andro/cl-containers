@@ -5,4 +5,4 @@ hostname: perl-node
 share_hardware: false
 
 run:
-    "perl -v"
+    "/usr/bin/perl -v"
