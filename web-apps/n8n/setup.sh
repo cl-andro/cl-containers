@@ -3,9 +3,10 @@ set -e
 echo "=== n8n-workflow Sandbox Setup ==="
 
 # Clean and create directories
-rm -rf /opt/node /opt/n8n
+rm -rf /opt/node /opt/n8n /opt/python-deps
 mkdir -p /opt/node
 mkdir -p /opt/n8n
+mkdir -p /opt/python-deps
 
 # 1. Download and extract Node.js v20.11.0
 echo "Downloading Node.js v20.11.0..."
@@ -14,21 +15,27 @@ echo "Extracting Node.js..."
 tar -C /opt/node --strip-components=1 -xJf /tmp/node.tar.xz
 rm -f /tmp/node.tar.xz
 
-# 2. Install n8n globally using local Node toolchain
-echo "Installing setuptools for python build dependencies..."
-python3 -m pip install --break-system-packages setuptools || true
+# 2. Download and unpack setuptools wheel using python zipfile module (bypasses PEP-668 / host sudo requirements)
+echo "Downloading setuptools wheel..."
+curl -L -o /tmp/setuptools.zip https://files.pythonhosted.org/packages/5d/40/e1e72872c6354b306daef1703549e8e83b4d43cfea356311bf722a043752/setuptools-83.0.0-py3-none-any.whl
+echo "Unpacking setuptools build dependency..."
+python3 -m zipfile -e /tmp/setuptools.zip /opt/python-deps
+rm -f /tmp/setuptools.zip
 
+# 3. Install n8n globally using local Node toolchain with PYTHONPATH override
 echo "Installing n8n globally..."
-PATH="/opt/node/bin:$PATH" /opt/node/bin/npm install -g n8n
+PYTHONPATH="/opt/python-deps" PATH="/opt/node/bin:$PATH" /opt/node/bin/npm install -g n8n
 
 # Setup proper permissions
 echo "Setting permissions..."
 chmod -R 755 /opt/node
 chmod -R 777 /opt/n8n
+chmod -R 755 /opt/python-deps
 
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
     chown -R "$SUDO_UID:$SUDO_GID" /opt/node
     chown -R "$SUDO_UID:$SUDO_GID" /opt/n8n
+    chown -R "$SUDO_UID:$SUDO_GID" /opt/python-deps
 fi
 
 echo "=== n8n-workflow Sandbox Forged ==="
