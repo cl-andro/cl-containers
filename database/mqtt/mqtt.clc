@@ -5,4 +5,4 @@ hostname: mqtt-node
 share_hardware: false
 
 run:
-    "mosquitto"
+    "LD_LIBRARY_PATH=/opt/mosquitto/usr/lib/x86_64-linux-gnu/ /opt/mosquitto/usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf"
