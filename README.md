@@ -105,12 +105,22 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`hugo`** | Static Site Generator | - | Hugo Extended static site compiler and server | Verified ✓ |
 | **`gatsby`** | Static Site Generator | - | Gatsby CLI site generator running on self-contained Node.js v22 | Verified ✓ |
 | **`ghost`** | Web Apps / CMS | `2368` | Ghost CMS blogging platform running on self-contained Node.js v22 and pnpm | Verified ✓ |
+| **`git-client`** | CI/CD / Git | - | Git CLI client running rootlessly with host sharing | Verified ✓ |
+| **`wget-cli`** | CI/CD / Utilities | - | GNU Wget CLI tool for fetching network resources | Verified ✓ |
+| **`curl-cli`** | CI/CD / Utilities | - | Curl command line tool for transferring data with URLs | Verified ✓ |
+| **`aws-cli`** | CI/CD / Cloud | - | AWS CLI v2 command-line tool for managing AWS services | Verified ✓ |
+| **`gcloud-cli`** | CI/CD / Cloud | - | Google Cloud SDK CLI tool for managing GCP resources | Verified ✓ |
+| **`kubectl`** | CI/CD / Containers | - | Kubernetes command-line tool for controlling clusters | Verified ✓ |
+| **`terraform`** | CI/CD / IaC | - | HashiCorp Terraform CLI for infrastructure as code | Verified ✓ |
+| **`ansible`** | CI/CD / Automation | - | Ansible IT automation engine running in rootless python venv | Verified ✓ |
+| **`gitlab-runner`** | CI/CD / Runners | - | GitLab Runner service for executing GitLab CI/CD jobs | Verified ✓ |
+| **`gitea-runner`** | CI/CD / Runners | - | Gitea Actions CI/CD runner execution binary (act_runner) | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
 
 ---
 
-## 🚀 Priority Releases Queue (Top 70 Complete)
+## 🚀 Priority Releases Queue (Top 80 Complete)
 
-We have successfully verified and released the top 70 most popular developer container environments! We will continue expansion to further milestones.
+We have successfully verified and released the top 80 most popular developer container environments! We will continue expansion to further milestones.
