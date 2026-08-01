@@ -5,4 +5,4 @@ hostname: mediawiki-node
 share_hardware: false
 
 run:
-    "/opt/frankenphp/frankenphp php-server --listen :8080 --root /opt/mediawiki"
+    "cd /opt/mediawiki && env PHP_INI_SCAN_DIR=/opt/mediawiki /opt/frankenphp/frankenphp php-server --listen :8080 --root /opt/mediawiki"

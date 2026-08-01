@@ -29,6 +29,11 @@ COMPOSER_ALLOW_SUPERUSER=1 /opt/frankenphp/frankenphp php-cli /tmp/composer.phar
 COMPOSER_ALLOW_SUPERUSER=1 /opt/frankenphp/frankenphp php-cli /tmp/composer.phar install --no-dev --no-interaction --working-dir=/opt/mediawiki
 rm -f /tmp/composer.phar
 
+# 5. Create custom php.ini to disable display_errors and deprecations
+echo "Creating custom php.ini..."
+echo "display_errors = Off" > /opt/mediawiki/php.ini
+echo "error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE" >> /opt/mediawiki/php.ini
+
 # Setup proper permissions (especially for images and cache directories)
 echo "Setting permissions..."
 chmod -R 777 /opt/frankenphp
