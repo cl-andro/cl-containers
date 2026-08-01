@@ -5,4 +5,4 @@ hostname: kubectl-node
 share_hardware: false
 
 run:
-    "kubectl version --client"
+    "/opt/kubectl/bin/kubectl version --client"
