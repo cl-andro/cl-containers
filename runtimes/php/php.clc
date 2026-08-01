@@ -5,4 +5,4 @@ hostname: php-node
 share_hardware: false
 
 run:
-    "php -v"
+    "/opt/php/usr/bin/php -v"
