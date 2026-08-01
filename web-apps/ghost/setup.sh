@@ -33,7 +33,7 @@ PATH=/opt/node/bin:$PATH /opt/node/bin/npm install --unsafe-perm ghost-cli@1.26.
 mkdir -p /opt/ghost
 cd /opt/ghost
 echo "Installing Ghost via ghost-cli..."
-PATH=/opt/node/bin:$PATH /opt/ghost-cli/node_modules/.bin/ghost install local --allow-root --no-start --dir /opt/ghost
+GHOST_NODE_VERSION_CHECK=false PATH=/opt/node/bin:$PATH /opt/ghost-cli/node_modules/.bin/ghost install local --allow-root --no-start --dir /opt/ghost
 
 echo "Setting permissions..."
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then

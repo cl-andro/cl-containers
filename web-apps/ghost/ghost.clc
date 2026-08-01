@@ -7,6 +7,7 @@ share_hardware: false
 env:
     PATH=/opt/node/bin:/usr/bin:/bin
     NODE_ENV=development
+    GHOST_NODE_VERSION_CHECK=false
 
 run:
     "node /opt/ghost/current/index.js"
