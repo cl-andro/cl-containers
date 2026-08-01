@@ -2,7 +2,8 @@
 name: wireguard-vpn
 rootfs: ./rootfs
 hostname: wireguard-node
-share_hardware: false
+share_hardware: true
+userns: false
 
 run:
-    "wg show"
+    "/opt/wireguard/usr/bin/wg show"
