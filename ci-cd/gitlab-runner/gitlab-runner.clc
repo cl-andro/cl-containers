@@ -5,4 +5,4 @@ hostname: gitlab-runner-node
 share_hardware: false
 
 run:
-    "gitlab-runner --version"
+    "/opt/gitlab-runner/bin/gitlab-runner --version"
