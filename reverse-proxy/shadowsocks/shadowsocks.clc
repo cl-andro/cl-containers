@@ -8,4 +8,4 @@ env:
     LD_LIBRARY_PATH=/opt/shadowsocks/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
 
 run:
-    "/opt/shadowsocks/usr/bin/ssserver -c /etc/shadowsocks.json"
+    "/opt/shadowsocks/usr/bin/ss-server -c /etc/shadowsocks.json"
