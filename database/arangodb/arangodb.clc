@@ -5,4 +5,4 @@ hostname: arangodb-node
 share_hardware: false
 
 run:
-    "/opt/arangodb/usr/sbin/arangod --server.endpoint tcp://0.0.0.0:8529"
+    "/opt/arangodb/usr/sbin/arangod --config /etc/arangodb3/arangod.conf"
