@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: gatsby-node
 share_hardware: false
 
+env:
+    PATH=/opt/node/bin:/usr/bin:/bin
+
 run:
     "/opt/gatsby/node_modules/.bin/gatsby --version"
