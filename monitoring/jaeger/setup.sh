@@ -11,4 +11,12 @@ fi
 tar -xzf jaeger.tar.gz --strip-components=1
 rm -f jaeger.tar.gz
 
+# Setup proper permissions
+echo "Setting permissions..."
+chmod -R 777 /opt/jaeger
+
+if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
+    chown -R "$SUDO_UID:$SUDO_GID" /opt/jaeger
+fi
+
 echo "=== jaeger-tracer Sandbox Forged ==="
