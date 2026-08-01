@@ -5,4 +5,4 @@ hostname: privoxy-node
 share_hardware: false
 
 run:
-    "privoxy --version"
+    "/opt/privoxy/usr/sbin/privoxy --version"
