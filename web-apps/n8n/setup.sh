@@ -15,6 +15,9 @@ tar -C /opt/node --strip-components=1 -xJf /tmp/node.tar.xz
 rm -f /tmp/node.tar.xz
 
 # 2. Install n8n globally using local Node toolchain
+echo "Installing setuptools for python build dependencies..."
+python3 -m pip install --break-system-packages setuptools || true
+
 echo "Installing n8n globally..."
 PATH="/opt/node/bin:$PATH" /opt/node/bin/npm install -g n8n
 
