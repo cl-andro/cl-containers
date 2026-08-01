@@ -5,4 +5,4 @@ hostname: gatsby-node
 share_hardware: false
 
 run:
-    "gatsby --version"
+    "/opt/gatsby/node_modules/.bin/gatsby --version"
