@@ -5,4 +5,4 @@ hostname: scylladb-node
 share_hardware: false
 
 run:
-    "/opt/scylla/usr/bin/scylla --developer-mode 1 --smp 1 --memory 1G"
+    "/opt/scylla/usr/bin/scylla --developer-mode=1 --smp=1 --memory=1G"
