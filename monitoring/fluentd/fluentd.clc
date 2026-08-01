@@ -5,4 +5,4 @@ hostname: fluentd-node
 share_hardware: false
 
 run:
-    "fluentd -c /etc/fluentd.conf"
+    "/opt/fluent/bin/fluentd -c /etc/fluentd/fluent.conf"
