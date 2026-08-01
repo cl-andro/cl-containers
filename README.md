@@ -75,12 +75,22 @@ The following recipes have been **100% tested, fixed, and verified** to run succ
 | **`squid`** | Reverse Proxy / Proxy | `3128` | Squid caching proxy utilizing LD_PRELOAD mock for rootless execution | Verified ✓ |
 | **`wordpress`** | Web Apps / CMS | `8080` | WordPress CMS utilizing self-contained PHP 8.4 runtime and MySQL drivers | Verified ✓ |
 | **`nodered`** | Web Apps / Flow | `1880` | Node-RED flow builder running on self-contained Node.js v22.11.0 | Verified ✓ |
+| **`python`** | Runtimes / Python | - | Python compiler and interpreter runtime environment | Verified ✓ |
+| **`golang`** | Runtimes / Go | - | Go compiler and standard development tools | Verified ✓ |
+| **`rust`** | Runtimes / Rust | - | Rust compiler toolchain and cargo package manager | Verified ✓ |
+| **`nodejs`** | Runtimes / JS | - | Node.js JavaScript runtime engine (v18.16.1) | Verified ✓ |
+| **`bind9`** | Reverse Proxy / DNS | `1053` | BIND9 DNS caching proxy running rootlessly on custom port | Verified ✓ |
+| **`dnsmasq`** | Reverse Proxy / DNS | `1053` | Dnsmasq DNS server with query logging to stderr | Verified ✓ |
+| **`fluentbit`** | Monitoring / Agent | - | Fluent Bit log forwarder collecting CPU metrics | Verified ✓ |
+| **`fluentd`** | Monitoring / Agent | `9880` | Fluentd log agent collecting HTTP traffic and writing to stdout | Verified ✓ |
+| **`arangodb`** | Database / Graph | `8529` | ArangoDB multi-model NoSQL document and graph database | Verified ✓ |
+| **`cockroachdb`** | Database / SQL | `26257` | CockroachDB cloud-native distributed SQL database in single-node mode | Verified ✓ |
 
 > [!NOTE]
 > All other folders in this repository contain recipes that are currently unverified or undergoing sequencing tests. Do not attempt to run `install` or `run` on them yet.
 
 ---
 
-## 🚀 Priority Releases Queue (Top 40 Complete)
+## 🚀 Priority Releases Queue (Top 50 Complete)
 
-We have successfully verified and released the top 40 most popular developer container environments! We will continue expansion to further milestones.
+We have successfully verified and released the top 50 most popular developer container environments! We will continue expansion to further milestones.
