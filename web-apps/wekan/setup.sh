@@ -25,7 +25,7 @@ rm -rf /tmp/wekan-extracted /tmp/wekan.zip
 # 3. Build/install Wekan server dependencies
 echo "Installing/building Wekan server dependencies..."
 cd /opt/wekan/programs/server
-/opt/node/bin/npm install
+PATH="/opt/node/bin:$PATH" /opt/node/bin/npm install
 
 # Setup proper permissions
 echo "Setting permissions..."
