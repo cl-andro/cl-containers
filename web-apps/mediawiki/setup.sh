@@ -9,12 +9,12 @@ mkdir -p /opt/mediawiki
 
 # 1. Download and configure FrankenPHP binary
 echo "Downloading FrankenPHP binary..."
-curl -L -o /opt/frankenphp/frankenphp https://github.com/php/frankenphp/releases/download/v1.12.6/frankenphp-linux-x86_64
+curl --http1.1 -L -o /opt/frankenphp/frankenphp https://github.com/php/frankenphp/releases/download/v1.12.6/frankenphp-linux-x86_64
 chmod +x /opt/frankenphp/frankenphp
 
 # 2. Download and extract MediaWiki release tarball
 echo "Downloading MediaWiki..."
-curl -L -o /tmp/mediawiki.tar.gz https://releases.wikimedia.org/mediawiki/1.42/mediawiki-1.42.1.tar.gz
+curl --http1.1 -L -o /tmp/mediawiki.tar.gz https://releases.wikimedia.org/mediawiki/1.42/mediawiki-1.42.1.tar.gz
 echo "Extracting MediaWiki..."
 tar -C /opt/mediawiki --strip-components=1 -xzf /tmp/mediawiki.tar.gz
 rm -f /tmp/mediawiki.tar.gz
