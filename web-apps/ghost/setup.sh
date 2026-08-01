@@ -27,7 +27,7 @@ rm -rf /tmp/node_extract
 mkdir -p /opt/ghost-cli
 cd /opt/ghost-cli
 echo "Installing ghost-cli..."
-PATH=/opt/node/bin:$PATH /opt/node/bin/npm install --unsafe-perm ghost-cli@1.26.0
+PATH=/opt/node/bin:$PATH /opt/node/bin/npm install --unsafe-perm ghost-cli@1.29.1
 
 # 3. Install Ghost locally using ghost-cli
 mkdir -p /opt/ghost
