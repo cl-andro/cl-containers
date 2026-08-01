@@ -30,7 +30,7 @@ echo "\$config['des_key'] = 'rcmail-166-some-random-salt';" >> /opt/roundcube/co
 
 # 4. Initialize SQLite Database
 echo "Initializing SQLite database..."
-/opt/php/bin/php /opt/roundcube/bin/initdb.sh --update || echo "Database initialized (or skipped)"
+/opt/php/bin/php7/bin/php /opt/roundcube/bin/initdb.sh --update || echo "Database initialized (or skipped)"
 
 # Setup proper permissions
 echo "Setting permissions..."
