@@ -31,13 +31,13 @@ rm -rf /tmp/elixir_extract
 
 echo "Patching Erlang ROOTDIR paths..."
 if [ -f /opt/elixir/usr/bin/erl ]; then
-    sed -i 's|ROOTDIR="/usr/lib/erlang"|ROOTDIR="/opt/elixir/usr/lib/erlang"|g' /opt/elixir/usr/bin/erl
+    sed -i 's|/usr/lib/erlang|/opt/elixir/usr/lib/erlang|g' /opt/elixir/usr/bin/erl
 fi
 if [ -f /opt/elixir/usr/lib/erlang/bin/erl ]; then
-    sed -i 's|ROOTDIR="/usr/lib/erlang"|ROOTDIR="/opt/elixir/usr/lib/erlang"|g' /opt/elixir/usr/lib/erlang/bin/erl
+    sed -i 's|/usr/lib/erlang|/opt/elixir/usr/lib/erlang|g' /opt/elixir/usr/lib/erlang/bin/erl
 fi
 if [ -f /opt/elixir/usr/lib/erlang/bin/start ]; then
-    sed -i 's|ROOTDIR="/usr/lib/erlang"|ROOTDIR="/opt/elixir/usr/lib/erlang"|g' /opt/elixir/usr/lib/erlang/bin/start
+    sed -i 's|/usr/lib/erlang|/opt/elixir/usr/lib/erlang|g' /opt/elixir/usr/lib/erlang/bin/start
 fi
 
 echo "Setting permissions..."
