@@ -5,4 +5,4 @@ hostname: dotnet-node
 share_hardware: false
 
 run:
-    "dotnet --version"
+    "/opt/dotnet/dotnet --version"
