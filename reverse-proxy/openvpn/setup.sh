@@ -23,7 +23,7 @@ rm -rf /tmp/openvpn_extract
 # Write server config
 echo "Creating static key and server configuration..."
 mkdir -p /etc/openvpn
-/opt/openvpn/usr/sbin/openvpn --genkey secret /etc/openvpn/static.key
+LD_LIBRARY_PATH=/opt/openvpn/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu /opt/openvpn/usr/sbin/openvpn --genkey secret /etc/openvpn/static.key
 
 cat << 'EOF' > /etc/openvpn/server.conf
 dev tun
