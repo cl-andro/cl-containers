@@ -5,4 +5,4 @@ hostname: n8n-node
 share_hardware: false
 
 run:
-    "n8n start"
+    "env PATH='/opt/node/bin:$PATH' N8N_PORT=8080 N8N_ENCRYPTION_KEY='cluster_n8n_secure_key' N8N_USER_FOLDER='/opt/n8n' /opt/node/bin/n8n start"
