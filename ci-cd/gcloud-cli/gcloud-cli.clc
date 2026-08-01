@@ -5,4 +5,4 @@ hostname: gcloud-cli-node
 share_hardware: false
 
 run:
-    "gcloud --version"
+    "/opt/google-cloud-sdk/bin/gcloud --version"
