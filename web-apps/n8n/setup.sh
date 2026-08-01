@@ -15,14 +15,18 @@ echo "Extracting Node.js..."
 tar -C /opt/node --strip-components=1 -xJf /tmp/node.tar.xz
 rm -f /tmp/node.tar.xz
 
-# 2. Download and unpack setuptools wheel using python zipfile module (bypasses PEP-668 / host sudo requirements)
+# 2. Download and unpack setuptools wheel
 echo "Downloading setuptools wheel..."
 curl -L -o /tmp/setuptools.zip https://files.pythonhosted.org/packages/5d/40/e1e72872c6354b306daef1703549e8e83b4d43cfea356311bf722a043752/setuptools-83.0.0-py3-none-any.whl
 echo "Unpacking setuptools build dependency..."
 python3 -m zipfile -e /tmp/setuptools.zip /opt/python-deps
 rm -f /tmp/setuptools.zip
 
-# 3. Create python wrapper shims inside /opt/node/bin to inject PYTHONPATH
+# 3. Copy setuptools/_distutils to top-level distutils to make it directly importable
+echo "Mapping distutils package..."
+cp -r /opt/python-deps/setuptools/_distutils /opt/python-deps/distutils
+
+# 4. Create python wrapper shims inside /opt/node/bin to inject PYTHONPATH
 echo "Creating python wrappers..."
 cat << 'EOF' > /opt/node/bin/python3
 #!/bin/sh
@@ -38,7 +42,11 @@ exec /usr/bin/python3 "$@"
 EOF
 chmod +x /opt/node/bin/python
 
-# 4. Install n8n globally using local Node toolchain with PYTHONPATH and PYTHON wrapper overrides
+# 5. Configure npm to use our Python wrapper
+echo "Configuring npm python path..."
+PATH="/opt/node/bin:$PATH" /opt/node/bin/npm config set python /opt/node/bin/python3
+
+# 6. Install n8n globally
 echo "Installing n8n globally..."
 PYTHON="/opt/node/bin/python3" PYTHONPATH="/opt/python-deps" PATH="/opt/node/bin:$PATH" /opt/node/bin/npm install -g n8n
 
