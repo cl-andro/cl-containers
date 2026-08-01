@@ -33,6 +33,21 @@ if [ -f /opt/r-lang/usr/lib/R/etc/ldpaths ]; then
     sed -i 's|/usr/lib/R|/opt/r-lang/usr/lib/R|g' /opt/r-lang/usr/lib/R/etc/ldpaths
 fi
 
+echo "Fixing R configuration symlinks..."
+rm -f /opt/r-lang/usr/lib/R/etc/ldpaths
+rm -f /opt/r-lang/usr/lib/R/etc/Makeconf
+rm -f /opt/r-lang/usr/lib/R/etc/Renviron
+rm -f /opt/r-lang/usr/lib/R/etc/Renviron.site
+rm -f /opt/r-lang/usr/lib/R/etc/repositories
+rm -f /opt/r-lang/usr/lib/R/etc/Rprofile.site
+
+ln -sf /opt/r-lang/etc/R/ldpaths /opt/r-lang/usr/lib/R/etc/ldpaths
+ln -sf /opt/r-lang/etc/R/Makeconf /opt/r-lang/usr/lib/R/etc/Makeconf
+ln -sf /opt/r-lang/etc/R/Renviron /opt/r-lang/usr/lib/R/etc/Renviron
+ln -sf /opt/r-lang/etc/R/Renviron.site /opt/r-lang/usr/lib/R/etc/Renviron.site
+ln -sf /opt/r-lang/etc/R/repositories /opt/r-lang/usr/lib/R/etc/repositories
+ln -sf /opt/r-lang/etc/R/Rprofile.site /opt/r-lang/usr/lib/R/etc/Rprofile.site
+
 echo "Setting permissions..."
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
     chown -R "$SUDO_UID:$SUDO_GID" /opt/r-lang

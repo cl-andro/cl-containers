@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: r-lang-node
 share_hardware: false
 
+env:
+    LD_LIBRARY_PATH=/opt/r-lang/usr/lib/R/lib:/opt/r-lang/usr/lib:/usr/lib/x86_64-linux-gnu
+
 run:
     "/opt/r-lang/usr/bin/R --version"
