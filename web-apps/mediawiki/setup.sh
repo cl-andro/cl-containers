@@ -25,6 +25,7 @@ curl -L -o /tmp/composer.phar https://getcomposer.org/composer-2.phar
 
 # 4. Install MediaWiki dependencies via Composer using FrankenPHP SAPI CLI
 echo "Installing MediaWiki composer dependencies..."
+COMPOSER_ALLOW_SUPERUSER=1 /opt/frankenphp/frankenphp php-cli /tmp/composer.phar config policy.advisories.block false --working-dir=/opt/mediawiki
 COMPOSER_ALLOW_SUPERUSER=1 /opt/frankenphp/frankenphp php-cli /tmp/composer.phar install --no-dev --no-interaction --working-dir=/opt/mediawiki
 rm -f /tmp/composer.phar
 
