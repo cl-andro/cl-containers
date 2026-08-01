@@ -2,7 +2,9 @@
 set -e
 echo "=== scylla-db Sandbox Setup ==="
 
-# Create necessary runtime data directories
+# Clean and create directory structures
+rm -rf /opt/scylla
+mkdir -p /opt/scylla
 mkdir -p /var/lib/scylla
 mkdir -p /var/log/scylla
 mkdir -p /var/lib/scylla/data
@@ -15,20 +17,30 @@ echo "Downloading ScyllaDB server and config packages..."
 curl -L -o /tmp/scylla-server.deb https://downloads.scylladb.com/downloads/scylla/deb/debian-ubuntu/scylladb-5.4/pool/main/s/scylla-server/scylla-server_5.4.9-0.20240703.fdcbbb85adcd-1_amd64.deb
 curl -L -o /tmp/scylla-conf.deb https://downloads.scylladb.com/downloads/scylla/deb/debian-ubuntu/scylladb-5.4/pool/main/s/scylla-server/scylla-conf_5.4.9-0.20240703.fdcbbb85adcd-1_amd64.deb
 
-echo "Extracting packages rootlessly to guest root..."
-dpkg -x /tmp/scylla-server.deb /
-dpkg -x /tmp/scylla-conf.deb /
+echo "Extracting packages rootlessly to /opt/scylla..."
+dpkg -x /tmp/scylla-server.deb /opt/scylla
+dpkg -x /tmp/scylla-conf.deb /opt/scylla
 
 # Clean up deb files
 rm -f /tmp/scylla-server.deb /tmp/scylla-conf.deb
 
+# Copy configuration to guest /etc/scylla/
+echo "Deploying default config..."
+mkdir -p /etc/scylla
+cp /opt/scylla/etc/scylla/scylla.yaml /etc/scylla/scylla.yaml
+
 # Setup proper permissions
 echo "Setting permissions..."
+chmod -R 777 /opt/scylla
 chmod -R 777 /var/lib/scylla
 chmod -R 777 /var/log/scylla
+chmod -R 777 /etc/scylla
+
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
+    chown -R "$SUDO_UID:$SUDO_GID" /opt/scylla
     chown -R "$SUDO_UID:$SUDO_GID" /var/lib/scylla
     chown -R "$SUDO_UID:$SUDO_GID" /var/log/scylla
+    chown -R "$SUDO_UID:$SUDO_GID" /etc/scylla
 fi
 
 echo "=== scylla-db Sandbox Forged ==="
