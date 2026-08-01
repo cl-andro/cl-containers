@@ -8,9 +8,13 @@ cd /tmp/openvpn_extract
 echo "Downloading OpenVPN package..."
 curl -L -o openvpn.deb https://deb.debian.org/debian/pool/main/o/openvpn/openvpn_2.6.14-1%2Bdeb13u3_amd64.deb
 
-echo "Extracting package..."
-dpkg-deb -x openvpn.deb /opt/openvpn/
-rm -f openvpn.deb
+echo "Downloading libpkcs11-helper1t64 package..."
+curl -L -o libpkcs11-helper.deb https://deb.debian.org/debian/pool/main/p/pkcs11-helper/libpkcs11-helper1t64_1.30.0-1%2Bb1_amd64.deb
+
+echo "Extracting packages..."
+for deb in *.deb; do
+    dpkg-deb -x "$deb" /opt/openvpn/
+done
 
 # Clean up temp folder
 cd /
