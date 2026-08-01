@@ -31,6 +31,7 @@ proto udp
 port 1194
 secret /etc/openvpn/static.key
 cipher AES-256-CBC
+ifconfig 10.8.0.1 10.8.0.2
 verb 3
 EOF
 
