@@ -19,7 +19,7 @@ python3 -c "import zipfile; zipfile.ZipFile('nextcloud.zip').extractall('.')"
 cp -r nextcloud/* /opt/nextcloud/
 rm -rf nextcloud*
 
-# 2. Download and Extract PHP 8.4 + Extensions
+# 2. Download and Extract PHP 8.4 + Extensions + Required Libraries
 mkdir -p /opt/php
 mkdir -p /tmp/php_extract
 cd /tmp/php_extract
@@ -37,7 +37,13 @@ curl -L -o php-xml.deb "$BASE_URL/php8.4-xml_${PHP_VER}_amd64.deb"
 curl -L -o php-mbstring.deb "$BASE_URL/php8.4-mbstring_${PHP_VER}_amd64.deb"
 curl -L -o php-curl.deb "$BASE_URL/php8.4-curl_${PHP_VER}_amd64.deb"
 
-echo "Extracting PHP packages..."
+echo "Downloading shared library dependencies..."
+# libonig5
+curl -L -o libonig5.deb https://deb.debian.org/debian/pool/main/libo/libonig/libonig5_6.9.9-1%2Bb1_amd64.deb
+# libzip5
+curl -L -o libzip5.deb https://deb.debian.org/debian/pool/main/libz/libzip/libzip5_1.11.3-2_amd64.deb
+
+echo "Extracting packages..."
 for deb in *.deb; do
     dpkg-deb -x "$deb" /opt/php/
 done

@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: nextcloud-node
 share_hardware: false
 
+env:
+    LD_LIBRARY_PATH=/opt/php/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
+
 run:
     "/opt/php/usr/bin/php8.4 -c /opt/php/php.ini -S 0.0.0.0:8080 -t /opt/nextcloud"
