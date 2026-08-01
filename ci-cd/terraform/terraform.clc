@@ -5,4 +5,4 @@ hostname: terraform-node
 share_hardware: false
 
 run:
-    "terraform --version"
+    "/opt/terraform/bin/terraform --version"
