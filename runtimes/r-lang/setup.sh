@@ -33,6 +33,12 @@ if [ -f /opt/r-lang/usr/lib/R/etc/ldpaths ]; then
     sed -i 's|/usr/lib/R|/opt/r-lang/usr/lib/R|g' /opt/r-lang/usr/lib/R/etc/ldpaths
 fi
 
+echo "Resolving Renviron configuration..."
+if [ -f /opt/r-lang/usr/lib/R/etc/Renviron.ucf ] && [ ! -f /opt/r-lang/etc/R/Renviron ]; then
+    mkdir -p /opt/r-lang/etc/R
+    cp /opt/r-lang/usr/lib/R/etc/Renviron.ucf /opt/r-lang/etc/R/Renviron
+fi
+
 echo "Fixing R configuration symlinks..."
 rm -f /opt/r-lang/usr/lib/R/etc/ldpaths
 rm -f /opt/r-lang/usr/lib/R/etc/Makeconf
