@@ -10,4 +10,4 @@ env:
     GHOST_NODE_VERSION_CHECK=false
 
 run:
-    "node /opt/ghost/current/index.js"
+    "cd /opt/ghost && node current/index.js"
