@@ -5,10 +5,12 @@ rm -rf /opt/ansible
 mkdir -p /opt/ansible
 
 echo "Creating python virtual environment..."
-python3 -m venv /opt/ansible/venv
+python3 -m venv --without-pip /opt/ansible/venv
 
-echo "Upgrading pip inside venv..."
-/opt/ansible/venv/bin/pip install --upgrade pip
+echo "Installing pip using bootstrap script..."
+curl -sS https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
+/opt/ansible/venv/bin/python3 /tmp/get-pip.py
+rm -f /tmp/get-pip.py
 
 echo "Installing ansible-core via pip..."
 /opt/ansible/venv/bin/pip install ansible-core
