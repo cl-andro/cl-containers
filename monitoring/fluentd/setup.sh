@@ -10,7 +10,7 @@ curl -L -o /tmp/fluent-package.deb https://fluentd.cdn.cncf.io/5/debian/bookworm
 echo "Extracting package to guest root..."
 mkdir -p /tmp/fluent_extract
 dpkg-deb -x /tmp/fluent-package.deb /tmp/fluent_extract
-cp -r /tmp/fluent_extract/opt/* /opt/
+cp -r /tmp/fluent_extract/opt/fluent /opt/
 rm -rf /tmp/fluent-package.deb /tmp/fluent_extract
 
 echo "Creating custom sandbox-friendly Fluentd configuration..."
