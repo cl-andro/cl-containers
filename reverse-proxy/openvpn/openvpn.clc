@@ -3,6 +3,7 @@ name: openvpn-vpn
 rootfs: ./rootfs
 hostname: openvpn-node
 share_hardware: true
+userns: false
 
 env:
     LD_LIBRARY_PATH=/opt/openvpn/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
