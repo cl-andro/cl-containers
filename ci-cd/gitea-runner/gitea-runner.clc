@@ -5,4 +5,4 @@ hostname: gitea-runner-node
 share_hardware: false
 
 run:
-    "/opt/gitea-runner/act_runner daemon"
+    "/opt/gitea-runner/act_runner --version"
