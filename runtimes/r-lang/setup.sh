@@ -55,10 +55,9 @@ ln -sf /opt/r-lang/etc/R/repositories /opt/r-lang/usr/lib/R/etc/repositories
 ln -sf /opt/r-lang/etc/R/Rprofile.site /opt/r-lang/usr/lib/R/etc/Rprofile.site
 
 echo "Setting permissions..."
+chmod -R 755 /opt/r-lang
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
     chown -R "$SUDO_UID:$SUDO_GID" /opt/r-lang
-else
-    chmod -R 777 /opt/r-lang
 fi
 
 echo "=== r-runtime Sandbox Forged ==="
