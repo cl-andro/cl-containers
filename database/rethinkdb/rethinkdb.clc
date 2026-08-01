@@ -5,4 +5,4 @@ hostname: rethinkdb-node
 share_hardware: false
 
 run:
-    "rethinkdb --bind all --directory /var/lib/rethinkdb"
+    "/opt/rethinkdb/usr/bin/rethinkdb --bind all --directory /var/lib/rethinkdb --run-in-jail"
