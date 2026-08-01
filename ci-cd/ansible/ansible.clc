@@ -5,4 +5,4 @@ hostname: ansible-node
 share_hardware: false
 
 run:
-    "ansible --version"
+    "/opt/ansible/venv/bin/ansible --version"
