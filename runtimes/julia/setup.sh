@@ -41,10 +41,9 @@ except Exception as e:
 '
 
 echo "Setting permissions..."
+chmod -R 755 /opt/julia
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
     chown -R "$SUDO_UID:$SUDO_GID" /opt/julia
-else
-    chmod -R 777 /opt/julia
 fi
 
 echo "=== julia-runtime Sandbox Forged ==="
