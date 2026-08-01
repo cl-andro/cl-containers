@@ -5,4 +5,4 @@ hostname: wekan-node
 share_hardware: false
 
 run:
-    "env MONGO_URL=mongodb://127.0.0.1:27017/wekan PORT=8080 ROOT_URL=http://localhost:8080 /opt/node/bin/node /opt/wekan/main.js"
+    "env MONGO_URL=mongodb://127.0.0.1:27017/wekan PORT=8080 ROOT_URL=http://localhost:8080 WRITABLE_PATH=/opt/wekan /opt/node/bin/node /opt/wekan/main.js"
