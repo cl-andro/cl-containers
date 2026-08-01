@@ -5,4 +5,4 @@ hostname: r-lang-node
 share_hardware: false
 
 run:
-    "R --version"
+    "/opt/r-lang/usr/bin/R --version"
