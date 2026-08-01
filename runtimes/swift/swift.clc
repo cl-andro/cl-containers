@@ -5,4 +5,4 @@ hostname: swift-node
 share_hardware: false
 
 run:
-    "swift --version"
+    "/opt/swift/usr/bin/swift --version"
