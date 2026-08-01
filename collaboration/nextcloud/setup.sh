@@ -57,21 +57,21 @@ echo "Writing custom php.ini..."
 cat << 'EOF' > /opt/php/php.ini
 [PHP]
 extension_dir = "/opt/php/usr/lib/php/20240924"
-extension=sqlite3.so
+extension=pdo.so
 extension=pdo_sqlite.so
-extension=gd.so
-extension=zip.so
+extension=sqlite3.so
 extension=xml.so
-extension=mbstring.so
-extension=curl.so
-extension=ctype.so
 extension=dom.so
 extension=simplexml.so
-extension=xmlwriter.so
 extension=xmlreader.so
+extension=xmlwriter.so
+extension=mbstring.so
+extension=gd.so
+extension=zip.so
+extension=curl.so
+extension=ctype.so
 extension=iconv.so
 extension=fileinfo.so
-extension=openssl.so
 extension=posix.so
 
 memory_limit = 512M
