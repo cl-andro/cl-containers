@@ -14,9 +14,10 @@ echo "Extracting JRE..."
 tar -C /opt/java --strip-components=1 -xzf /tmp/jre.tar.gz
 rm -f /tmp/jre.tar.gz
 
-# 2. Download Zipkin Server JAR
-echo "Downloading Zipkin Server jar..."
-curl -L -o /opt/zipkin/zipkin.jar "https://search.maven.org/remote_content?g=io.zipkin&a=zipkin-server&v=LATEST&c=exec"
+# 2. Run Zipkin quickstart script to fetch the latest stable executable jar
+echo "Running Zipkin quickstart script..."
+cd /opt/zipkin
+curl -sSL https://zipkin.io/quickstart.sh | bash -s
 
 # Setup proper permissions
 echo "Setting permissions..."
