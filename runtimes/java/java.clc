@@ -5,4 +5,4 @@ hostname: java-node
 share_hardware: false
 
 run:
-    "java -version"
+    "/opt/java/bin/java -version"
