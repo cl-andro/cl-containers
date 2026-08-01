@@ -4,5 +4,8 @@ rootfs: ./rootfs
 hostname: scala-node
 share_hardware: false
 
+env:
+    PATH=/opt/scala/bin:/opt/scala/jre/bin:/usr/bin:/bin
+
 run:
-    "scala -version"
+    "/opt/scala/bin/scala -version"
