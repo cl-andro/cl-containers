@@ -27,11 +27,15 @@ rm -f /tmp/mosquitto.deb /tmp/libmosquitto.deb /tmp/libwebsockets.deb /tmp/libdl
 # Set up configuration
 echo "Configuring Mosquitto..."
 mkdir -p /etc/mosquitto
+mkdir -p /etc/mosquitto/conf.d
 if [ -f /opt/mosquitto/etc/mosquitto/mosquitto.conf ]; then
     cp /opt/mosquitto/etc/mosquitto/mosquitto.conf /etc/mosquitto/mosquitto.conf
 else
     touch /etc/mosquitto/mosquitto.conf
 fi
+
+# Comment out any include_dir directives that might point to missing host folders
+sed -i 's/^include_dir/#include_dir/g' /etc/mosquitto/mosquitto.conf
 
 # Append custom configuration options
 echo "listener 1883 0.0.0.0" >> /etc/mosquitto/mosquitto.conf
