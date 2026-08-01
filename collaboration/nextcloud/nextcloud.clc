@@ -5,4 +5,4 @@ hostname: nextcloud-node
 share_hardware: false
 
 run:
-    "php -S 0.0.0.0:8080 -t /opt/nextcloud"
+    "/opt/php/usr/bin/php8.4 -c /opt/php/php.ini -S 0.0.0.0:8080 -t /opt/nextcloud"
