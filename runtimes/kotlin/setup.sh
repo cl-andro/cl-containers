@@ -20,6 +20,10 @@ echo "Extracting JRE 17..."
 tar -xzf /tmp/jre.tar.gz -C /opt/kotlin/jre --strip-components=1
 rm -f /tmp/jre.tar.gz
 
+echo "Restoring executable permissions..."
+chmod -R +x /opt/kotlin/bin/
+chmod -R +x /opt/kotlin/jre/bin/
+
 echo "Setting permissions..."
 if [ -n "$SUDO_UID" ] && [ -n "$SUDO_GID" ]; then
     chown -R "$SUDO_UID:$SUDO_GID" /opt/kotlin
