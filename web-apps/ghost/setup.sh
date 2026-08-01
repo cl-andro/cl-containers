@@ -2,16 +2,16 @@
 set -e
 echo "=== ghost-blog Sandbox Setup ==="
 
-# 1. Download and extract NodeJS standalone v20.15.1
+# 1. Download and extract NodeJS standalone v22.23.2
 mkdir -p /opt/node
 mkdir -p /tmp/node_extract
 cd /tmp/node_extract
 
-echo "Downloading NodeJS standalone v20.15.1..."
+echo "Downloading NodeJS standalone v22.23.2..."
 if command -v wget >/dev/null 2>&1; then
-    wget -O node.tar.xz https://nodejs.org/dist/v20.15.1/node-v20.15.1-linux-x64.tar.xz
+    wget -O node.tar.xz https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.xz
 else
-    curl -L -o node.tar.xz https://nodejs.org/dist/v20.15.1/node-v20.15.1-linux-x64.tar.xz
+    curl -L -o node.tar.xz https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.xz
 fi
 
 echo "Extracting NodeJS..."
