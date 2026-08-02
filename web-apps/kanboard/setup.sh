@@ -1,15 +1,15 @@
 #!/bin/sh
 set -e
 
-mkdir -p ./rootfs/opt/frankenphp
-mkdir -p ./rootfs/opt/kanboard
+mkdir -p /opt/frankenphp
+mkdir -p /opt/kanboard
 
 echo "Downloading FrankenPHP..."
-curl -L -o ./rootfs/opt/frankenphp/frankenphp https://github.com/dunglas/frankenphp/releases/download/v1.5.0/frankenphp-linux-x86_64
-chmod +x ./rootfs/opt/frankenphp/frankenphp
+curl -L --retry 3 --retry-delay 5 -o /opt/frankenphp/frankenphp https://github.com/dunglas/frankenphp/releases/download/v1.5.0/frankenphp-linux-x86_64
+chmod +x /opt/frankenphp/frankenphp
 
 echo "Creating Kanboard mockup..."
-cat << 'EOF' > ./rootfs/opt/kanboard/index.php
+cat << 'EOF' > /opt/kanboard/index.php
 <?php
 // Kanboard mockup index.php
 ?>

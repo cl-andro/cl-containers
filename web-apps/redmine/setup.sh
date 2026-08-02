@@ -3,15 +3,15 @@ set -e
 
 echo "Building Redmine container..."
 
-mkdir -p ./rootfs/opt/frankenphp
-mkdir -p ./rootfs/opt/redmine
+mkdir -p /opt/frankenphp
+mkdir -p /opt/redmine
 
 echo "Downloading FrankenPHP..."
-curl -L "https://github.com/dunglas/frankenphp/releases/download/v1.5.0/frankenphp-linux-x86_64" -o ./rootfs/opt/frankenphp/frankenphp
-chmod +x ./rootfs/opt/frankenphp/frankenphp
+curl -L --retry 3 --retry-delay 5 -o /opt/frankenphp/frankenphp https://github.com/dunglas/frankenphp/releases/download/v1.5.0/frankenphp-linux-x86_64
+chmod +x /opt/frankenphp/frankenphp
 
 echo "Creating Redmine dashboard mockup..."
-cat << 'EOF' > ./rootfs/opt/redmine/index.php
+cat << 'EOF' > /opt/redmine/index.php
 <?php
 $issues = [
     ['id' => 101, 'status' => 'New', 'priority' => 'High', 'subject' => 'Setup cluster sandbox', 'assignee' => 'admin'],
@@ -193,6 +193,6 @@ function createIssue() {
 </html>
 EOF
 
-chmod 644 ./rootfs/opt/redmine/index.php
+chmod 644 /opt/redmine/index.php
 
 echo "Done!"

@@ -2,7 +2,8 @@
 set -e
 
 mkdir -p /opt/frankenphp
-curl -L https://github.com/dunglas/frankenphp/releases/download/v1.5.0/frankenphp-linux-x86_64 -o /opt/frankenphp/frankenphp
+echo "Downloading FrankenPHP..."
+curl -L --retry 3 --retry-delay 5 -o /opt/frankenphp/frankenphp https://github.com/dunglas/frankenphp/releases/download/v1.5.0/frankenphp-linux-x86_64
 chmod +x /opt/frankenphp/frankenphp
 
 mkdir -p /opt/owncloud
