@@ -1,8 +1,7 @@
-# redmine-app Sandbox Configuration
-name: redmine-app
+name: redmine
 rootfs: ./rootfs
-hostname: redmine-node
+hostname: redmine
 share_hardware: false
 
 run:
-    "rails server -b 0.0.0.0"
+    "/opt/frankenphp/frankenphp php-server --listen 0.0.0.0:8080 --root /opt/redmine"
