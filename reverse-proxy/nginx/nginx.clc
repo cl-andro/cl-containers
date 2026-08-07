@@ -3,6 +3,7 @@ name: nginx-server
 rootfs: ./rootfs
 hostname: nginx-node
 share_hardware: false
+userns: false
 
 run:
     "/opt/nginx/sbin/nginx -g 'daemon off;'"
