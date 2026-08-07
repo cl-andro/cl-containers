@@ -27,7 +27,7 @@ rm -rf /tmp/nginx-build
 # Adjust default nginx configuration to run as unprivileged user on port 8080
 if [ -f /opt/nginx/conf/nginx.conf ]; then
     sed -i 's/listen       80;/listen       8080;/g' /opt/nginx/conf/nginx.conf
-    sed -i 's/#user  nobody;/user nobody;/g' /opt/nginx/conf/nginx.conf
+    sed -i 's/#user  nobody;/user nobody nogroup;/g' /opt/nginx/conf/nginx.conf
 fi
 
 echo "=== Nginx Sandbox Forged ==="
